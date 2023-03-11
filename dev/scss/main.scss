@@ -1,0 +1,17 @@
+// IMPORTANDO BOOTSTRAP
+@import "../../node_modules/bootstrap/scss/bootstrap.scss";
+
+$body-bg: darkcyan;
+
+// $blue: red;
+
+body {
+    background-color: $body-bg;
+}
+
+main {
+    background-color: darkgoldenrod;
+    h1 {
+        color: $blue;
+    }
+}
