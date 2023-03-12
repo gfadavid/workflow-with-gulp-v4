@@ -17,32 +17,32 @@ var reload = browsersync.reload;
 
 
 // == Browser-sync task
-gulp.task("browser-sync", function(done){
+gulp.task("browser-sync", function (done) {
   browsersync.init({
     server: "./",
-    startPath: "dist/index.html", // After it browser running [File path set]
+    startPath: "site-lol/dist/index.html", // After it browser running [File path set]
     //    browser: 'chrome',
     host: 'localhost',
     //    port: 4000,
     open: true,
-    tunnel: true 
+    tunnel: true
   });
   gulp.watch(["./**/*.html"]).on("change", reload); // [File path set]
-  done(); 
+  done();
 });
 // == Browser-sync task
 
 // CSS task
 gulp.task("css", () => {
   return gulp
-    .src("dev/scss/**/*")
+    .src("site-lol/dev/scss/**/*")
     .pipe(plumber())
     .pipe(sass({ outputStyle: "expanded" }))
     .pipe(rename({ suffix: ".min" }))
     .pipe(postcss([autoprefixer(), cssnano()]))
-    .pipe(gulp.dest("dist/css"))
+    .pipe(gulp.dest("site-lol/dist/css"))
     .pipe(notify({
-          message: "main SCSS processed"
+      message: "main SCSS processed"
     }))
     .pipe(browsersync.stream())
     .pipe(livereload())
@@ -56,32 +56,30 @@ gulp.task("css", () => {
 // });
 
 // Transpile, concatenate and minify scripts
-// gulp.task("js", () => {
-//   return (
-//     gulp
-//       .src([
-//       'assets/js/jquery-3.6.0.min.js',      
-//       'assets/js/popper.min.js', 
-//       'assets/js/bootstrap.min.js',
-//       'assets/js/select2.min.js',
-//       'assets/js/general.js'
-//     ])
-//       .pipe(plumber())
+gulp.task("js", () => {
+  return (
+    gulp
+      .src([
+        // '~/bootstrap/dist/js/bootstrap.bundle.js',
+        'node_modules/bootstrap/dist/js/bootstrap.bundle.js',
+        'site-lol/dev/js/scripts.js'
+      ])
+      .pipe(plumber())
 
-//       // folder only, filename is specified in webpack config
-//       .pipe(concat('app.js'))
-//       .pipe(gulp.dest("public/js"))
-//       .pipe(browsersync.stream())
-//       .pipe(livereload())
-//   );
-// });
+      // folder only, filename is specified in webpack config
+      .pipe(concat('scripts.js'))
+      .pipe(gulp.dest("site-lol/dist/js"))
+      .pipe(browsersync.stream())
+      .pipe(livereload())
+  );
+});
 
 // gulp.task("default", gulp.series( "css", "js", "webfonts", "browser-sync", () => {
-gulp.task("default", gulp.series( "css", "browser-sync", () => {
+gulp.task("default", gulp.series("css", "js", "browser-sync", () => {
   livereload.listen();
-  gulp.watch(["dev/scss/**/*"], gulp.series("css"));
-//   gulp.watch(["assets/js/**/*"], gulp.series("js"));
-//   gulp.watch(["assets/scss/vendor/fontawesome/webfonts/*"], gulp.series("webfonts"));
+  gulp.watch(["site-lol/dev/scss/**/*"], gulp.series("css"));
+  gulp.watch(["site-lol/dev/js/**/*"], gulp.series("js"));
+  //   gulp.watch(["assets/scss/vendor/fontawesome/webfonts/*"], gulp.series("webfonts"));
 }));
 
 
