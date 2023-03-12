@@ -1,17 +1,33 @@
 // IMPORTANDO BOOTSTRAP
 @import "../../../node_modules/bootstrap/scss/bootstrap";
 
-$body-bg: darkcyan;
+$body-bg: hotpink;
 
 // $blue: red;
 
+// PALETA DE COLORES
+$black          : #111;
+
+// MODELO DE CAJA
+$height--1      : 80px;
+
+
 body {
     background-color: $body-bg;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
-main {
-    background-color: darkgoldenrod;
-    h1 {
-        color: $blue;
-    }
+/* HEADER */
+.main-header {
+    background-color: $black;
+    color: $white;
+    height: $height--1;
+    top: 0;
+}
+
+.main-content {
+    background-color: darkcyan;
+    margin-top: $height--1;
 }
