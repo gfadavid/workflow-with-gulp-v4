@@ -1,5 +1,5 @@
 {
-  "name": "gulp-hindu",
+  "name": "gulpv4-enviroment-for-development-static-sites",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
-  "author": "",
+  "author": "@gfadavid",
   "license": "ISC",
   "devDependencies": {
     "autoprefixer": "^10.4.14",
