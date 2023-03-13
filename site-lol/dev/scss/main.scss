@@ -6,11 +6,23 @@ $body-bg: hotpink;
 // $blue: red;
 
 // PALETA DE COLORES
-$black          : #111;
+$black: #111;
+
+$color--1       : #eb0029;
+
+// ESCALA DE GRISES
+$gray--1        : rgba(128,128,128,.2);
 
 // MODELO DE CAJA
-$height--1      : 80px;
+$height--1: 80px; // ALTURA HEADER
 
+$width--1: 105px; // ICONS HEADER
+
+// TRANSICIONES
+$transition--1      : all .5s;
+
+// BORDES REDONDEADOS
+$border-radius--1   : 6.4px;
 
 body {
     background-color: $body-bg;
@@ -19,12 +31,59 @@ body {
     min-height: 100vh;
 }
 
+a {
+    display: block;
+    &:hover {
+        transition: $transition--1;
+    }
+}
+
 /* HEADER */
 .main-header {
     background-color: $black;
     color: $white;
     height: $height--1;
     top: 0;
+    
+    &__logo {
+        width: 95px;
+        height: 32px;
+        fill: $white;
+        &:hover {
+            cursor: pointer;
+            fill: red;
+            transition: $transition--1;
+        }
+    }
+    &__icon {
+        // background-color: darkmagenta;
+        width: $width--1;
+        &__item {
+            // background-color: darksalmon;
+            display: block;
+            width: 48px;
+            height: 48px;
+            line-height: 48px;
+            text-align: center;
+            &:first-child {
+                &:hover {
+                    background-color: $gray--1;
+                    border-radius: $border-radius--1;
+                }
+            }
+            &:nth-child(even) {
+                svg {
+                    width: 48px;
+                    height: 48px;
+                }
+            }
+            svg {
+                width: 24px;
+                height: 24px;
+                margin-top: -3px;
+            }
+        }
+    }
 }
 
 .main-content {
