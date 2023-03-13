@@ -9,9 +9,11 @@ $body-bg: hotpink;
 $black: #111;
 
 $color--1       : #eb0029;
+$color--2       : rgb(0, 160, 186);
 
 // ESCALA DE GRISES
 $gray--1        : rgba(128,128,128,.2);
+$gray--2        : rgba(128,128,128,.3);
 
 // MODELO DE CAJA
 $height--1: 80px; // ALTURA HEADER
@@ -22,7 +24,8 @@ $width--1: 105px; // ICONS HEADER
 $transition--1      : all .5s;
 
 // BORDES REDONDEADOS
-$border-radius--1   : 6.4px;
+$border-radius--1   : 6.4px; // BORDER DE LOS ÍCONOS EN EL HEADER
+$border-radius--2   : 2px; // BARRA DE COLOR AZUL SOBRE EL TÍTULO
 
 body {
     background-color: $body-bg;
@@ -53,6 +56,39 @@ a {
             cursor: pointer;
             fill: red;
             transition: $transition--1;
+        }
+    }
+    &-menu-desktop {
+        // background-color: lightcoral;
+        @at-root {
+            .navbar-expand-lg .navbar-nav {
+                .nav-link {
+                    padding: 7.5px 16px;
+                    font-size: 13px;
+                    text-transform: uppercase;
+                    letter-spacing: .08em;
+                    font-weight: bolder;
+                    margin-right: 4px;
+                }
+            }
+            .nav-link.active,
+            .nav-link:hover {
+               background-color: $gray--2;
+               border-radius: $border-radius--1;
+               position: relative;
+               &::before {
+                content: '';
+                display: block;
+                background-color: $color--2;
+                width: 100%;
+                height: 4px;
+                border-radius: $border-radius--2;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                left: 0;
+               }
+           }
         }
     }
     &__icon {
