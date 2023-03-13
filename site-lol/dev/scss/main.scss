@@ -10,10 +10,16 @@ $black: #111;
 
 $color--1       : #eb0029;
 $color--2       : rgb(0, 160, 186);
+$color--3       : #292929;
+
+// FUENTES
+$fsz--1         : 11px;
 
 // ESCALA DE GRISES
 $gray--1        : rgba(128,128,128,.2);
 $gray--2        : rgba(128,128,128,.3);
+$gray--3        : #c7c7c7;
+$gray--4        : #fcfcfc;
 
 // MODELO DE CAJA
 $height--1: 80px; // ALTURA HEADER
@@ -64,11 +70,24 @@ a {
             .navbar-expand-lg .navbar-nav {
                 .nav-link {
                     padding: 7.5px 16px;
-                    font-size: 13px;
+                    font-size: $fsz--1;
                     text-transform: uppercase;
                     letter-spacing: .08em;
                     font-weight: bolder;
                     margin-right: 4px;
+                }
+                .dropdown-menu {
+                    background-color: $color--3;
+                    font-size: $fsz--1;
+                }
+                @at-root {
+                    .dropdown-item {
+                        color: $gray--3;
+                        &:hover {
+                            background-color: $gray--2;
+                            color: $gray--4;
+                        }
+                    }
                 }
             }
             .nav-link.active,
@@ -85,7 +104,7 @@ a {
                 border-radius: $border-radius--2;
                 position: absolute;
                 right: 0;
-                bottom: 0;
+                bottom: -16px; /* NÚMERO MÁGICO */
                 left: 0;
                }
            }
