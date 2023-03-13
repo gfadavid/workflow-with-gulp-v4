@@ -20,6 +20,7 @@ $gray--1        : rgba(128,128,128,.2);
 $gray--2        : rgba(128,128,128,.3);
 $gray--3        : #c7c7c7;
 $gray--4        : #fcfcfc;
+$gray--5        : #1f1f1f;
 
 // MODELO DE CAJA
 $height--1: 80px; // ALTURA HEADER
@@ -42,6 +43,7 @@ body {
 
 a {
     display: block;
+    text-decoration: none;
     &:hover {
         transition: $transition--1;
     }
@@ -141,7 +143,43 @@ a {
     }
 }
 
+/* OFF CANVAS */
+.offcanvas {
+    background-color: $gray--5;
+    color: $white;
+    &-header {
+        // background-color: darkcyan;
+        .btn-close {
+            filter: invert(1) grayscale(100%) brightness(200%);
+        }
+    }
+    &-body {
+        // background-color: darkgoldenrod;
+        @at-root {
+            .offcanvas__menu {
+                &__item {
+                    // background-color: darkorange;
+                    background-color: transparent;
+                    padding: 0 0 0 16px;
+                    line-height: 3;
+                    &:hover {
+                        background-color: $gray--2;
+                    }
+                }
+                &__link {
+                    // background-color: darkseagreen;
+                    color: $white;
+                    &:hover {
+                        padding-left: 16px;
+                        color: $gray--4;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .main-content {
-    background-color: darkcyan;
+    // background-color: darkcyan;
     margin-top: $height--1;
 }
