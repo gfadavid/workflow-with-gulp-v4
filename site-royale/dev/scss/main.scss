@@ -23,10 +23,10 @@ $gray--4        : #fcfcfc;
 $gray--5        : #1f1f1f;
 
 // MODELO DE CAJA
-$height--1: 80px; // ALTURA HEADER
+$height--1      : 100px; // ALTURA HEADER
+$height--2      : 200px; // ALTURA VIDEO
 
-$width--1: 105px; // ICONS HEADER
-
+$width--1       : 50px; // LATERALES DE LA MESA (NÚMERICA)
 // TRANSICIONES
 $transition--1      : all .5s;
 
@@ -55,134 +55,60 @@ a {
     color: $white;
     height: $height--1;
     top: 0;
-    
-    &__logo {
-        width: 95px;
-        height: 32px;
-        fill: $white;
-        &:hover {
-            cursor: pointer;
-            fill: red;
-            transition: $transition--1;
-        }
-    }
-    &-menu-desktop {
-        // background-color: lightcoral;
-        @at-root {
-            .navbar-expand-lg .navbar-nav {
-                .nav-link {
-                    padding: 7.5px 16px;
-                    font-size: $fsz--1;
-                    text-transform: uppercase;
-                    letter-spacing: .08em;
-                    font-weight: bolder;
-                    margin-right: 4px;
-                }
-                .dropdown-menu {
-                    background-color: $color--3;
-                    font-size: $fsz--1;
-                }
-                @at-root {
-                    .dropdown-item {
-                        color: $gray--3;
-                        &:hover {
-                            background-color: $gray--2;
-                            color: $gray--4;
-                        }
-                    }
-                }
-            }
-            .nav-link.active,
-            .nav-link:hover {
-               background-color: $gray--2;
-               border-radius: $border-radius--1;
-               position: relative;
-               &::before {
-                content: '';
-                display: block;
-                background-color: $color--2;
-                width: 100%;
-                height: 4px;
-                border-radius: $border-radius--2;
-                position: absolute;
-                right: 0;
-                bottom: -16px; /* NÚMERO MÁGICO */
-                left: 0;
-               }
-           }
-        }
-    }
-    &__icon {
-        // background-color: darkmagenta;
-        width: $width--1;
-        &__item {
-            // background-color: darksalmon;
-            display: block;
-            width: 48px;
-            height: 48px;
-            line-height: 48px;
-            text-align: center;
-            &:first-child {
-                &:hover {
-                    background-color: $gray--1;
-                    border-radius: $border-radius--1;
-                }
-            }
-            &:nth-child(even) {
-                svg {
-                    width: 48px;
-                    height: 48px;
-                }
-            }
-            svg {
-                width: 24px;
-                height: 24px;
-                margin-top: -3px;
-            }
-        }
-    }
-}
-
-/* OFF CANVAS */
-.offcanvas {
-    background-color: $gray--5;
-    color: $white;
-    &-header {
-        // background-color: darkcyan;
-        .btn-close {
-            filter: invert(1) grayscale(100%) brightness(200%);
-        }
-    }
-    &-body {
-        // background-color: darkgoldenrod;
-        @at-root {
-            .offcanvas__menu {
-                &__item {
-                    // background-color: darkorange;
-                    background-color: transparent;
-                    padding: 0 0 0 16px;
-                    line-height: 3;
-                    &:hover {
-                        background-color: $gray--2;
-                    }
-                }
-                &__link {
-                    // background-color: darkseagreen;
-                    color: $white;
-                    &:hover {
-                        padding-left: 16px;
-                        color: $gray--4;
-                    }
-                }
-            }
-        }
-    }
 }
 
 .main-content {
     background-color: darkcyan;
+    margin: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     color: $white;
+    @at-root {
+        .video {
+            background-color: steelblue;
+            height: $height--1;
+        }
+        .table {
+            background-color: darkgoldenrod;
+            &__header {
+                background-color: darkmagenta;
+                display: flex;
+                &__left {
+                    background-color: lightcoral;
+                    width: $width--1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                &__center {
+                    background-color: lightseagreen;
+                    flex-grow: 1;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+                &__right {
+                    background-color: lightskyblue;
+                    width: $width--1;
+                    &__item {
+                        background-color: #eb0029;
+                        padding: 0 !important; // OVERRIDE BOOTSTRAP (POR ESPECIFICIDAD)
+                        display: flex;
+                        flex-direction: column;
+                        text-align: center;
+                        &:nth-child(even) {
+                            background-color: brown;
+                        }
+                    }
+                }
+            }
+            &__body {
+                background-color: darkorange;
+            }
+            &__footer {
+                background-color: darksalmon;
+            }
+        }
+    }
 }
