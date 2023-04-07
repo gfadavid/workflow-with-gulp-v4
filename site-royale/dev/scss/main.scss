@@ -8,31 +8,36 @@ $body-bg: hotpink;
 // PALETA DE COLORES
 $black: #111;
 
-$color--1       : #eb0029;
-$color--2       : rgb(0, 160, 186);
-$color--3       : #292929;
+$color--1: #eb0029;
+$color--2: rgb(0, 160, 186);
+$color--3: #292929;
+
+// DEL JUEGO
+$red-game   : #932D2B;
+$black-game : #0B0F07;
 
 // FUENTES
-$fsz--1         : 11px;
+$fsz--1: 11px;
 
 // ESCALA DE GRISES
-$gray--1        : rgba(128,128,128,.2);
-$gray--2        : rgba(128,128,128,.3);
-$gray--3        : #c7c7c7;
-$gray--4        : #fcfcfc;
-$gray--5        : #1f1f1f;
+$gray--1: rgba(128, 128, 128, 0.2);
+$gray--2: rgba(128, 128, 128, 0.3);
+$gray--3: #c7c7c7;
+$gray--4: #fcfcfc;
+$gray--5: #1f1f1f;
 
 // MODELO DE CAJA
-$height--1      : 100px; // ALTURA HEADER
-$height--2      : 30vh; // ALTURA VIDEO
+$height--1: 100px; // ALTURA HEADER
+$height--2: 30vh; // ALTURA VIDEO
+$height--3: 50px; // ALTURA DE LOS ELEMENTOR DEL FOOTER (MESA CENTER)
 
-$width--1       : 50px; // LATERALES DE LA MESA (NÚMERICA)
+$width--1: 50px; // LATERALES DE LA MESA (NÚMERICA)
 // TRANSICIONES
-$transition--1      : all .5s;
+$transition--1: all 0.5s;
 
 // BORDES REDONDEADOS
-$border-radius--1   : 6.4px; // BORDER DE LOS ÍCONOS EN EL HEADER
-$border-radius--2   : 2px; // BARRA DE COLOR AZUL SOBRE EL TÍTULO
+$border-radius--1: 6.4px; // BORDER DE LOS ÍCONOS EN EL HEADER
+$border-radius--2: 2px; // BARRA DE COLOR AZUL SOBRE EL TÍTULO
 
 body {
     background-color: $body-bg;
@@ -102,13 +107,52 @@ a {
                     }
                     &__footer {
                         background-color: chartreuse;
-                        padding: 10px;
+                        padding: 10px 0;
                         &--one,
                         &--two {
                             background-color: deeppink;
-                            text-align: center;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: $height--3;
+                            &__item {
+                                height: $height--3;
+                                &__subitem {
+                                    height: $height--3;
+                                }
+                            }
+                            &__item {
+                                background-color: burlywood;
+                                flex: 1 0 calc(100% / 3);
+                                display: flex;
+                                justify-content: center;
+                                align-items: center;
+                                &:nth-child(even) {
+                                    background-color: darkblue;
+                                }
+                                &__subitem {
+                                    background-color: hotpink;
+                                    flex: 1 0 50%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                    &:nth-child(even) {
+                                        background-color: lightseagreen;
+                                    }
+                                }
+                            }
                             &:nth-child(even) {
                                 background-color: crimson;
+                            }
+                        }
+                        &--two {
+                            &__item.even {
+                                .table__header__center__footer--two__item__subitem {
+                                    background-color: $red-game;
+                                    &:nth-child(even) {
+                                        background-color: $black-game;
+                                    }
+                                }
                             }
                         }
                     }
