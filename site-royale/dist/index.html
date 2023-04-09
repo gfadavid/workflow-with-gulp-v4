@@ -17,20 +17,21 @@
     </h1>
   </header>
 
-  <main class="main-content flex-md-grow-1">
+  <!-- <main class="main-content flex-md-grow-1"> -->
+  <main class="main-content">
 
     <div class="container g-0"> <!-- PARA APROVECHAR TODO EL ANCHO EN VISTA MÓVIL -->
 
       <div class="row">
 
-        <div class="col-md-8 mx-auto">
+        <div class="col-md-10 mx-auto">
 
           <article class="video d-flex justify-content-center align-items-center">
             VIDEO RULETA
           </article>
 
           <article class="table">
-      
+
             <section class="table__header">
 
               <article class="table__header__left">
@@ -41,22 +42,52 @@
 
                 <section class="table__header__center__body">
 
-                  <section class="table__header__center__body__item">Sección #1</section>
-                  <section class="table__header__center__body__item">Sección #2</section>
-                  <section class="table__header__center__body__item">Sección #3</section>
+                  <section class="table__header__center__body__item">
+
+                    <div class="table__header__center__body__item__grid">
+
+                      <div class="table__header__center__body__item__grid--one">
+                        <div class="table__header__center__body__item__grid--one__item table-bg--red">1</div>
+                        <div class="table__header__center__body__item__grid--one__item table-bg--black">2</div>
+                        <div class="table__header__center__body__item__grid--one__item table-bg--red">3</div>
+                      </div>
+                      <div class="table__header__center__body__item__grid--two">
+                        <div class="table__header__center__body__item__grid--two__item table-bg--black">4</div>
+                        <div class="table__header__center__body__item__grid--two__item table-bg--red">5</div>
+                        <div class="table__header__center__body__item__grid--two__item table-bg--black">6</div>
+                      </div>
+                      <div class="table__header__center__body__item__grid--three">
+                        <div class="table__header__center__body__item__grid--three__item table-bg--red">7</div>
+                        <div class="table__header__center__body__item__grid--three__item table-bg--black">8</div>
+                        <div class="table__header__center__body__item__grid--three__item table-bg--red">9</div>
+                      </div>
+                      <div class="table__header__center__body__item__grid--four">
+                        <div class="table__header__center__body__item__grid--four__item table-bg--black">10</div>
+                        <div class="table__header__center__body__item__grid--four__item table-bg--red">11</div>
+                        <div class="table__header__center__body__item__grid--four__item table-bg--black">12</div>
+                      </div>
+                      
+                    </div>
+                  </section>
+                  <section class="table__header__center__body__item">
+                    Sección #2
+                  </section>
+                  <section class="table__header__center__body__item">
+                    Sección #3
+                  </section>
 
                 </section>
 
                 <section class="table__header__center__footer">
-                  
+
                   <article class="table__header__center__footer--one">
-                    
+
                     <section class="table__header__center__footer--one__item">1st - 12</section>
                     <section class="table__header__center__footer--one__item">2nd - 12</section>
                     <section class="table__header__center__footer--one__item">3rd - 12</section>
-                    
+
                   </article>
-                  
+
                   <article class="table__header__center__footer--two">
 
                     <section class="table__header__center__footer--two__item">
@@ -98,7 +129,7 @@
 
             <!-- <section class="table__body">Table #2</section>
             <section class="table__footer">Table #3</section> -->
-      
+
           </article>
 
         </div>
@@ -113,16 +144,16 @@
 
     <div class="row">
 
-      <div class="col-md-8 mx-auto">
+      <div class="col-md-10 mx-auto">
 
         <footer class="main-footer">
 
           <article class="main-footer__top">
-      
+
             <section class="main-footer__top__left">
 
               <div class="container-shadow">
-                
+
                 <div class="main-footer__top__left__item">
                   <a href="#" class="btn--1">
                     1
@@ -148,12 +179,45 @@
 
             </section>
 
-            <section class="main-footer__top__center">CARRUSEL</section>
+            <section class="main-footer__top__center">
+
+              <!-- COMPONENTE "CAROUSEL DE BOOTSTRAP" -->
+              <!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"> -->
+              <div id="carouselExampleControls" class="carousel slide">
+
+                <div class="carousel-inner">
+
+                  <div class="carousel-item active">
+                    ITEM # 1
+                  </div>
+                  <div class="carousel-item">
+                    ITEM # 2
+                  </div>
+                  <div class="carousel-item">
+                    ITEM # 3
+                  </div>
+
+                </div>
+
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                  data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                  data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+
+              </div>
+
+            </section>
 
             <section class="main-footer__top__right">
 
               <div class="container-shadow disabled">
-                
+
                 <div class="main-footer__top__right__item">
                   <a href="#" class="btn--1">
                     1
@@ -178,11 +242,11 @@
               </div>
 
             </section>
-      
+
           </article>
-          
+
           <article class="main-footer__bottom">
-      
+
             <section class="main-footer__bottom__left">1 2 3 4</section>
             <section class="main-footer__bottom__center">
               <article class="main-footer__bottom__center__text">
@@ -202,9 +266,9 @@
                 NETENT
               </p>
             </section>
-      
+
           </article>
-      
+
         </footer>
 
       </div>
