@@ -119,6 +119,28 @@ p {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    border-top: $border--2;
+                    border-bottom: $border--2;
+                    position: relative;
+                    &::before,
+                    &::after {
+                        content: '';
+                        background-color: $white;
+                        height: 1.5px;
+                        position: absolute;
+                        transform: rotateZ(108deg);
+                    }
+                    &::before {
+                        top: 39px;
+                        left: -56px;
+                        width: 85px;
+                    }
+                    &::after {
+                        bottom: 34px;
+                        left: -52px;
+                        transform: rotateZ(-110deg);
+                        width: calc(152px / 2);
+                    }
                     &__number {
                         font-size: $fsz--2;
                     }
