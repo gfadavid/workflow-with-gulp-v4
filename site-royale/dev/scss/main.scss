@@ -39,10 +39,12 @@ $height--2: 30vh; // ALTURA VIDEO
 $height--3: 50px; // ALTURA DE LOS ELEMENTOR DEL FOOTER (MESA CENTER)
 $height--4: 152px; // ALTURA LATERALES DE LA MESA (NÚMERICA)
 $height--5: 50px; // ALTURA DE CADA CELDA DEL GRID NÚMERICO
+$height--6: 40px; // ALTURA DEL CÍRCULO QUE ENCIERRA A LOS NÚMEROS
 
 $width--1: 80px; // LATERALES DE LA MESA (NÚMERICA)
 $width--2: 30px; // TAMAÑO DE LOS BOTONES REDONDEADOS (FOOTER)
 $width--3: 160px; // CONTENEDORES DE ÍCONOS (FOOTER)
+$width--4: 40px; // ALTURA DEL CÍRCULO QUE ENCIERRA A LOS NÚMEROS
 // TRANSICIONES
 $transition--1: all 0.5s;
 
@@ -56,6 +58,7 @@ $border-radius--4: 50%; // BOTONES DEL FOOTER
 $border--1: 1px solid tomato;
 $border--2: 1px solid $white;
 $border--3: 1px solid rgba(255, 255, 255, .8);
+$border--4: 1px solid rgba(255, 255, 255, .5);
 
 // OPACIDAD
 $opacity--1: rgb(0, 0, 0, 0.75);
@@ -181,11 +184,29 @@ p {
                                     display: flex;
                                     flex-direction: column-reverse;
                                     border-right: $border--2;
+                                    position: relative;
                                     &__item {
                                         display: flex;
                                         align-items: center;
                                         justify-content: center;
                                         height: $height--5;
+                                        > span {
+                                            line-height: 1;
+                                            margin-top: -3px; /* NÚMERO MÁGICO */
+                                        }
+                                        &::before {
+                                            content: '';
+                                            border: $border--4;
+                                            border-radius: $border-radius--4;
+                                            position: absolute;
+                                            right: 0;
+                                            left: 0;
+                                            margin-right: auto;
+                                            margin-left: auto;
+                                            z-index: 10;
+                                            width: $width--4;
+                                            height: $height--6;
+                                        }
                                         @at-root {
                                             .table-bg--red {
                                                 background-color: $red-game;
