@@ -17,13 +17,14 @@ $red-game: #932d2b;
 $black-game: #0b0f07;
 
 // FUENTES
-$font-family--1: 'Noto Serif Khojki', serif;
+$font-family--1: "Noto Serif Khojki", serif;
 
 $fsz--1: 11px;
 $fsz--2: 50px;
 $fsz--3: 35px;
+$fsz--4: 24px;
 
-$fw--bold         : 700;
+$fw--bold: 700;
 
 // ESCALA DE GRISES
 $gray--1: rgba(128, 128, 128, 0.2);
@@ -51,8 +52,8 @@ $border-radius--3: 25px; // CONTENEDOR SHADOW EN EL FOOTER DE LA VISTA
 $border-radius--4: 50%; // BOTONES DEL FOOTER
 
 // BORDES
-$border--1      : 1px solid tomato;
-$border--2      : 1px solid $white;
+$border--1: 1px solid tomato;
+$border--2: 1px solid $white;
 
 // OPACIDAD
 $opacity--1: rgb(0, 0, 0, 0.75);
@@ -178,6 +179,8 @@ p {
                     }
                     &__footer {
                         background-color: chartreuse;
+                        border: $border--2;
+                        border-top: none;
                         &--one,
                         &--two {
                             background-color: deeppink;
@@ -187,8 +190,16 @@ p {
                             height: $height--3;
                             &__item {
                                 height: $height--3;
+                                p {
+                                    font-size: $fsz--4;
+                                    position: relative;
+                                    top: -2px; /* NÚMERO MÁGICO */
+                                }
                                 &__subitem {
                                     height: $height--3;
+                                    &:first-child {
+                                        border-right: $border--2;
+                                    }
                                 }
                             }
                             &__item {
@@ -197,8 +208,11 @@ p {
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
+                                border-bottom: $border--2;
                                 &:nth-child(even) {
                                     background-color: darkblue;
+                                    border-right: $border--2;
+                                    border-left: $border--2;
                                 }
                                 &__subitem {
                                     background-color: hotpink;
@@ -255,12 +269,6 @@ p {
                     }
                 }
             }
-            // &__body {
-            //     background-color: darkorange;
-            // }
-            // &__footer {
-            //     background-color: darksalmon;
-            // }
         }
     }
 }
