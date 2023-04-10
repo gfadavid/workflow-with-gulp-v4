@@ -20,6 +20,8 @@ $black-game: #0b0f07;
 $font-family--1: 'Noto Serif Khojki', serif;
 
 $fsz--1: 11px;
+$fsz--2: 50px;
+$fsz--3: 35px;
 
 $fw--bold         : 700;
 
@@ -34,10 +36,10 @@ $gray--5: #1f1f1f;
 $height--1: 100px; // ALTURA HEADER
 $height--2: 30vh; // ALTURA VIDEO
 $height--3: 50px; // ALTURA DE LOS ELEMENTOR DEL FOOTER (MESA CENTER)
-$height--4: 151px; // ALTURA LATERALES DE LA MESA (NÚMERICA)
+$height--4: 152px; // ALTURA LATERALES DE LA MESA (NÚMERICA)
 $height--5: 50px; // ALTURA DE CADA CELDA DEL GRID NÚMERICO
 
-$width--1: 50px; // LATERALES DE LA MESA (NÚMERICA)
+$width--1: 80px; // LATERALES DE LA MESA (NÚMERICA)
 $width--2: 30px; // TAMAÑO DE LOS BOTONES REDONDEADOS (FOOTER)
 // TRANSICIONES
 $transition--1: all 0.5s;
@@ -113,6 +115,9 @@ p {
                     display: flex;
                     justify-content: center;
                     align-items: center;
+                    &__number {
+                        font-size: $fsz--2;
+                    }
                 }
                 &__center {
                     background-color: lightseagreen;
@@ -173,7 +178,6 @@ p {
                     }
                     &__footer {
                         background-color: chartreuse;
-                        padding: 10px 0;
                         &--one,
                         &--two {
                             background-color: deeppink;
@@ -226,13 +230,27 @@ p {
                 &__right {
                     background-color: lightskyblue;
                     width: $width--1;
+                    height: $height--4;
+                    display: flex;
+                    flex-direction: column;
+                    border: $border--2;
+                    border-left: none;
                     &__item {
-                        background-color: #eb0029;
-                        display: block;
                         text-align: center;
-                        line-height: calc($height--4 / 3);
+                        font-size: $fsz--3;
+                        height: $height--3;
+                        position: relative;
                         &:nth-child(even) {
                             background-color: brown;
+                            border-top: $border--2;
+                            border-bottom: $border--2;
+                        }
+                        > p {
+                            position: absolute;
+                            top: 50%;
+                            transform: translateY(-55%);
+                            right: 0;
+                            left: 0;
                         }
                     }
                 }
@@ -252,7 +270,7 @@ p {
     background-color: darkkhaki;
 
     &__top {
-        padding: 10px;
+        // padding: 10px;
         display: flex;
         @at-root {
             [class*="main-footer__top__"] {
