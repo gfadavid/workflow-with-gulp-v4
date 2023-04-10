@@ -108,12 +108,12 @@ p {
             height: $height--2;
         }
         .table {
-            background-color: darkgoldenrod;
+            // background-color: darkgoldenrod;
             &__header {
-                background-color: darkmagenta;
+                // background-color: darkmagenta;
                 display: flex;
                 &__left {
-                    background-color: lightcoral;
+                    // background-color: lightcoral;
                     width: $width--1;
                     height: $height--4;
                     display: flex;
@@ -124,33 +124,33 @@ p {
                     }
                 }
                 &__center {
-                    background-color: lightseagreen;
+                    // background-color: lightseagreen;
                     flex-grow: 1;
                     &__body {
-                        background-color: blueviolet;
+                        // background-color: blueviolet;
                         display: flex;
                         border: $border--2;
                         &__item {
-                            background-color: chocolate;
+                            // background-color: chocolate;
                             flex-grow: 1;
                             text-align: center;
                             // @media screen and (min-width: 992px) {
                             //     line-height: $height--1;
                             // }
                             &:nth-child(even) {
-                                background-color: cornflowerblue;
+                                // background-color: cornflowerblue;
                                 border-right: $border--2;
                                 border-left: $border--2;
                             }
                             &__grid {
-                                background-color: darkslateblue;
+                                // background-color: darkslateblue;
                                 display: flex;
                                 &--one,
                                 &--two,
                                 &--three,
                                 &--four {
                                     flex: 1 1 calc(100% / 4);
-                                    background-color: lightslategrey;
+                                    // background-color: lightslategrey;
                                     // padding: 10px;
                                     display: flex;
                                     flex-direction: column-reverse;
@@ -181,12 +181,12 @@ p {
                         }
                     }
                     &__footer {
-                        background-color: chartreuse;
+                        // background-color: chartreuse;
                         border: $border--2;
                         border-top: none;
                         &--one,
                         &--two {
-                            background-color: deeppink;
+                            // background-color: deeppink;
                             display: flex;
                             justify-content: center;
                             align-items: center;
@@ -206,33 +206,36 @@ p {
                                 }
                             }
                             &__item {
-                                background-color: burlywood;
+                                // background-color: burlywood;
                                 flex: 1 0 calc(100% / 3);
                                 display: flex;
                                 justify-content: center;
                                 align-items: center;
                                 border-bottom: $border--2;
                                 &:nth-child(even) {
-                                    background-color: darkblue;
+                                    // background-color: darkblue;
                                     border-right: $border--2;
                                     border-left: $border--2;
                                 }
                                 &__subitem {
-                                    background-color: hotpink;
+                                    // background-color: hotpink;
                                     flex: 1 0 50%;
                                     display: flex;
                                     justify-content: center;
                                     align-items: center;
                                     &:nth-child(even) {
-                                        background-color: lightseagreen;
+                                        // background-color: lightseagreen;
                                     }
                                 }
                             }
                             &:nth-child(even) {
-                                background-color: crimson;
+                                // background-color: crimson;
                             }
                         }
                         &--two {
+                            &__item {
+                                border-bottom: none;
+                            }
                             &__item.even {
                                 .table__header__center__footer--two__item__subitem {
                                     background-color: $red-game;
@@ -245,7 +248,7 @@ p {
                     }
                 }
                 &__right {
-                    background-color: lightskyblue;
+                    // background-color: lightskyblue;
                     width: $width--1;
                     height: $height--4;
                     display: flex;
@@ -258,7 +261,7 @@ p {
                         height: $height--3;
                         position: relative;
                         &:nth-child(even) {
-                            background-color: brown;
+                            // background-color: brown;
                             border-top: $border--2;
                             border-bottom: $border--2;
                         }
@@ -375,7 +378,7 @@ p {
         &__center {
             // background-color: aquamarine;
             &__text {
-                background-color: #932d2b;
+                // background-color: #932d2b;
                 display: flex;
                 justify-content: center;
                 align-items: center;
