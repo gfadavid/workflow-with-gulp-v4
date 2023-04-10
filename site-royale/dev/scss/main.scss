@@ -161,7 +161,7 @@ p {
                         border: $border--2;
                         &__item {
                             // background-color: chocolate;
-                            flex-grow: 1;
+                            flex: 1 1 calc(100% / 3);
                             text-align: center;
                             // @media screen and (min-width: 992px) {
                             //     line-height: $height--1;
