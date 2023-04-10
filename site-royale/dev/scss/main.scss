@@ -17,7 +17,11 @@ $red-game: #932d2b;
 $black-game: #0b0f07;
 
 // FUENTES
+$font-family--1: 'Noto Serif Khojki', serif;
+
 $fsz--1: 11px;
+
+$fw--bold         : 700;
 
 // ESCALA DE GRISES
 $gray--1: rgba(128, 128, 128, 0.2);
@@ -30,7 +34,8 @@ $gray--5: #1f1f1f;
 $height--1: 100px; // ALTURA HEADER
 $height--2: 30vh; // ALTURA VIDEO
 $height--3: 50px; // ALTURA DE LOS ELEMENTOR DEL FOOTER (MESA CENTER)
-$height--4: 121px; // ALTURA LATERALES DE LA MESA (NÚMERICA)
+$height--4: 150px; // ALTURA LATERALES DE LA MESA (NÚMERICA)
+$height--5: 50px; // ALTURA DE CADA CELDA DEL GRID NÚMERICO
 
 $width--1: 50px; // LATERALES DE LA MESA (NÚMERICA)
 $width--2: 30px; // TAMAÑO DE LOS BOTONES REDONDEADOS (FOOTER)
@@ -57,6 +62,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    font-family: $font-family--1;
 }
 
 a {
@@ -89,6 +95,7 @@ p {
     align-items: center;
     justify-content: center;
     color: $white;
+    font-weight: $fw--bold;
     @at-root {
         .video {
             background-color: steelblue;
@@ -143,7 +150,7 @@ p {
                                         display: flex;
                                         align-items: center;
                                         justify-content: center;
-                                        height: 40px;
+                                        height: $height--5;
                                         @at-root {
                                             .table-bg--red {
                                                 background-color: $red-game;
@@ -230,12 +237,12 @@ p {
                     }
                 }
             }
-            &__body {
-                background-color: darkorange;
-            }
-            &__footer {
-                background-color: darksalmon;
-            }
+            // &__body {
+            //     background-color: darkorange;
+            // }
+            // &__footer {
+            //     background-color: darksalmon;
+            // }
         }
     }
 }
