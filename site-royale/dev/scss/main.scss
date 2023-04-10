@@ -352,6 +352,9 @@ p {
             .carousel {
                 width: 100%;
                 text-align: center;
+                p {
+                    color: $white;
+                }
             }
         }
         &__right {
