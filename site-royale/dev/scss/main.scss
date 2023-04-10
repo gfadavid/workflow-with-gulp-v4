@@ -106,7 +106,8 @@ p {
         .video {
             // background-color: steelblue;
             // height: $height--2;
-            video {
+            video,
+            img {
                 width: 100%;
             }
         }
