@@ -285,9 +285,25 @@ p {
                             }
                             &__item.even {
                                 .table__header__center__footer--two__item__subitem {
+                                    position: relative;
                                     background-color: $red-game;
+                                    > span {
+                                        visibility: hidden;
+                                    }
                                     &:nth-child(even) {
                                         background-color: $black-game;
+                                    }
+                                    &::before {
+                                        content: '';
+                                        width: calc($width--4 - 10px);
+                                        height: calc($height--6 - 10px);
+                                        position: absolute;
+                                        right: 0;
+                                        left: 0;
+                                        margin-right: auto;
+                                        margin-left: auto;
+                                        border: $border--4; 
+                                        transform: rotate(45deg);
                                     }
                                 }
                             }
