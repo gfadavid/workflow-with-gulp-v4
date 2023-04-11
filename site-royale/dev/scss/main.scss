@@ -58,8 +58,9 @@ $border-radius--4: 50%; // BOTONES DEL FOOTER
 // BORDES
 $border--1: 2px solid $red-game;
 $border--2: 1px solid $white;
-$border--3: 1px solid rgba(255, 255, 255, .8);
-$border--4: 1px solid rgba(255, 255, 255, .5);
+$border--3: 1px solid rgba(255, 255, 255, 0.8);
+$border--4: 1px solid rgba(255, 255, 255, 0.5);
+$border--5: 2px dashed $white;
 
 // OPACIDAD
 $opacity--1: rgb(0, 0, 0, 0.75);
@@ -72,7 +73,7 @@ body {
     flex-direction: column;
     min-height: 100vh;
     font-family: $font-family--1;
-    background-image: url('../../dist/img/bg-green.jpg');
+    background-image: url("../../dist/img/bg-green.jpg");
 }
 
 a {
@@ -152,7 +153,7 @@ p {
                     position: relative;
                     &::before,
                     &::after {
-                        content: '';
+                        content: "";
                         background-color: $white;
                         height: 1.5px;
                         position: absolute;
@@ -216,7 +217,7 @@ p {
                                             margin-top: -3px; /* NÚMERO MÁGICO */
                                         }
                                         &::before {
-                                            content: '';
+                                            content: "";
                                             border: $border--4;
                                             border-radius: $border-radius--4;
                                             position: absolute;
@@ -315,7 +316,7 @@ p {
                                         background-color: $black-game;
                                     }
                                     &::before {
-                                        content: '';
+                                        content: "";
                                         width: calc($width--4 - 10px);
                                         height: calc($height--6 - 10px);
                                         position: absolute;
@@ -323,7 +324,7 @@ p {
                                         left: 0;
                                         margin-right: auto;
                                         margin-left: auto;
-                                        border: $border--4; 
+                                        border: $border--4;
                                         transform: rotate(45deg);
                                     }
                                 }
@@ -372,7 +373,7 @@ p {
         display: flex;
         @at-root {
             [class*="main-footer__top__"] {
-                flex: 1 0 calc(100% / 3);
+                flex: 0 0 calc(100% / 4);
                 height: $height--3;
                 display: flex;
                 align-items: center;
@@ -380,6 +381,7 @@ p {
         }
         &__center {
             justify-content: center;
+            flex: 1 1 calc(100% / 2);
         }
         &__right {
             justify-content: flex-end;
@@ -414,8 +416,91 @@ p {
             .carousel {
                 width: 100%;
                 text-align: center;
-                p {
-                    color: $white;
+                &-item {
+                    &__betchip {
+                        display: flex;
+                        justify-content: center;
+                        &__item {
+                            color: $white;
+                            background-color: $black-game;
+                            width: $width--4;
+                            height: $width--4;
+                            border-radius: $border-radius--4;
+                            position: relative;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            > span {
+                                line-height: 1;
+                                // margin-top: -3px;
+                                position: relative;
+                                &::before {
+                                    content: "";
+                                    position: absolute;
+                                    top: -10px;
+                                    right: -13px;
+                                    border: 1px solid white;
+                                    height: 34px;
+                                    width: 34px;
+                                    border-radius: 50%;
+                                    margin-top: 1px;
+                                }
+                                &.fix-center--two {
+                                    &::before {
+                                        right: -9px;
+                                    }
+                                }
+                                > p {
+                                    position: relative;
+                                    top: -3px;
+                                }
+                            }
+                            &:hover {
+                                opacity: $opacity--3;
+                            }
+                            &::before,
+                            &::after {
+                                content: "";
+                                border: $border--5;
+                                display: block;
+                                width: $width--4;
+                                height: $width--4;
+                                border-radius: $border-radius--4;
+                                position: absolute;
+                                z-index: 10;
+                                top: 0;
+                                right: 0;
+                            }
+                            &::after {
+                                z-index: 5;
+                                border: 2px solid cyan;
+                            }
+                            &:nth-child(even) {
+                                margin-right: 10px;
+                                margin-left: 10px;
+                            }
+                            &:nth-child(2) {
+                                &::after {
+                                    border-color: yellow;
+                                }
+                            }
+                            &:nth-child(3) {
+                                &::after {
+                                    border-color: $red-game;
+                                }
+                            }
+                            &:nth-child(4) {
+                                &::after {
+                                    border-color: indigo;
+                                }
+                            }
+                            &:nth-child(5) {
+                                &::after {
+                                    border-color: forestgreen;
+                                }
+                            }
+                        }
+                    }
                 }
             }
         }
