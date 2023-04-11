@@ -73,25 +73,6 @@ body {
     min-height: 100vh;
     font-family: $font-family--1;
     background-image: url('../../dist/img/bg-green.jpg');
-    position: relative;
-    @at-root {
-        .counter {
-            background-color: $black-game;
-            border: $border--1;
-            color: $white;
-            font-weight: $fw--bold;
-            position: absolute;
-            top: calc($height--1 + 10px);
-            right: calc($width--2 - 15px);
-            border-radius: $border-radius--4;
-            width: $width--1;
-            height: $width--1;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: $fsz--5;
-        }
-    }
 }
 
 a {
@@ -129,9 +110,29 @@ p {
         .video {
             // background-color: steelblue;
             // height: $height--2;
+            position: relative;
+            @at-root {
+                .counter {
+                    background-color: $black-game;
+                    border: $border--1;
+                    color: $white;
+                    font-weight: $fw--bold;
+                    position: absolute;
+                    top: calc($width--2 - 20px);
+                    right: calc($width--2 - 20px);
+                    border-radius: $border-radius--4;
+                    width: $width--1;
+                    height: $width--1;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: $fsz--5;
+                }
+            }
             video,
             img {
                 width: 100%;
+                position: relative;
             }
         }
         .table {
