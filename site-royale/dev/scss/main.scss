@@ -101,17 +101,24 @@ p {
 /* TABLERO */
 .main-content {
     // background-color: darkcyan;
-    margin: 10px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    // margin: 10px;
     color: $white;
     font-weight: $fw--bold;
+    @media screen and (min-width: 992px) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
     @at-root {
         .video {
             // background-color: steelblue;
             // height: $height--2;
             position: relative;
+            &,
+            .bg-ruleta {
+                width: 100%;
+            }
             @at-root {
                 .counter {
                     background-color: $black-game;
@@ -120,7 +127,8 @@ p {
                     font-weight: $fw--bold;
                     position: absolute;
                     top: calc($width--2 - 20px);
-                    right: calc($width--2 - 20px);
+                    // right: calc($width--2 - 20px);
+                    right: 15%;
                     border-radius: $border-radius--4;
                     width: $width--1;
                     height: $width--1;
@@ -130,14 +138,14 @@ p {
                     font-size: $fsz--5;
                 }
             }
-            video,
-            img {
-                width: 100%;
+            video {
                 position: relative;
             }
         }
         .table {
             // background-color: darkgoldenrod;
+            margin-top: 10px;
+            margin-bottom: 10px;
             &__header {
                 // background-color: darkmagenta;
                 display: flex;
