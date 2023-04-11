@@ -23,6 +23,7 @@ $fsz--1: 11px;
 $fsz--2: 50px;
 $fsz--3: 35px;
 $fsz--4: 24px;
+$fsz--5: 30px;
 
 $fw--bold: 700;
 
@@ -55,7 +56,7 @@ $border-radius--3: 25px; // CONTENEDOR SHADOW EN EL FOOTER DE LA VISTA
 $border-radius--4: 50%; // BOTONES DEL FOOTER
 
 // BORDES
-$border--1: 1px solid tomato;
+$border--1: 2px solid $red-game;
 $border--2: 1px solid $white;
 $border--3: 1px solid rgba(255, 255, 255, .8);
 $border--4: 1px solid rgba(255, 255, 255, .5);
@@ -72,6 +73,25 @@ body {
     min-height: 100vh;
     font-family: $font-family--1;
     background-image: url('../../dist/img/bg-green.jpg');
+    position: relative;
+    @at-root {
+        .counter {
+            background-color: $black-game;
+            border: $border--1;
+            color: $white;
+            font-weight: $fw--bold;
+            position: absolute;
+            top: calc($height--1 + 10px);
+            right: calc($width--2 - 15px);
+            border-radius: $border-radius--4;
+            width: $width--1;
+            height: $width--1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: $fsz--5;
+        }
+    }
 }
 
 a {

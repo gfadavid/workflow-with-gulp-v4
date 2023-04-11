@@ -13,9 +13,45 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Khojki:wght@700&display=swap" rel="stylesheet">
 
+  <script type="text/javascript">
+
+    function startTimer(duration, display) {
+      var timer = duration, minutes, seconds;
+      setInterval(function () {
+        // minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 30, 10);
+
+        // minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "3" + seconds : seconds;
+
+        // display.textContent = minutes + ":" + seconds;
+        display.textContent = seconds;
+
+        // if (--timer < 0) {
+        //   timer = duration;
+        //   alert('El tiempo se ha terminado');
+        //   clearInterval(timer);
+        // }
+      }, 1000);
+    }
+
+    window.onload = function () {
+      // var fiveMinutes = 60 * 5,
+      var oneMinute = 30,
+        display = document.querySelector('#time');
+      startTimer(oneMinute, display);
+    };
+
+  </script>
+
 </head>
 
 <body>
+
+  <!-- CONTADOR -->
+  <div class="counter">
+    <span id="time">30</span>
+  </div>
 
   <header class="main-header d-flex align-items-center justify-content-center">
     <h1 class="title--1">
@@ -64,24 +100,36 @@
                     <div class="table__header__center__body__item__grid">
 
                       <div class="table__header__center__body__item__grid--one">
-                        <div class="table__header__center__body__item__grid--one__item table-bg--red"><span>1</span></div>
-                        <div class="table__header__center__body__item__grid--one__item table-bg--black"><span>2</span></div>
-                        <div class="table__header__center__body__item__grid--one__item table-bg--red"><span>3</span></div>
+                        <div class="table__header__center__body__item__grid--one__item table-bg--red"><span>1</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--one__item table-bg--black"><span>2</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--one__item table-bg--red"><span>3</span>
+                        </div>
                       </div>
                       <div class="table__header__center__body__item__grid--two">
-                        <div class="table__header__center__body__item__grid--two__item table-bg--black"><span>4</span></div>
-                        <div class="table__header__center__body__item__grid--two__item table-bg--red"><span>5</span></div>
-                        <div class="table__header__center__body__item__grid--two__item table-bg--black"><span>6</span></div>
+                        <div class="table__header__center__body__item__grid--two__item table-bg--black"><span>4</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--two__item table-bg--red"><span>5</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--two__item table-bg--black"><span>6</span>
+                        </div>
                       </div>
                       <div class="table__header__center__body__item__grid--three">
-                        <div class="table__header__center__body__item__grid--three__item table-bg--red"><span>7</span></div>
-                        <div class="table__header__center__body__item__grid--three__item table-bg--black"><span>8</span></div>
-                        <div class="table__header__center__body__item__grid--three__item table-bg--red"><span>9</span></div>
+                        <div class="table__header__center__body__item__grid--three__item table-bg--red"><span>7</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--three__item table-bg--black"><span>8</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--three__item table-bg--red"><span>9</span>
+                        </div>
                       </div>
                       <div class="table__header__center__body__item__grid--four">
-                        <div class="table__header__center__body__item__grid--four__item table-bg--black"><span>10</span></div>
-                        <div class="table__header__center__body__item__grid--four__item table-bg--black"><span>11</span></div>
-                        <div class="table__header__center__body__item__grid--four__item table-bg--red"><span>12</span></div>
+                        <div class="table__header__center__body__item__grid--four__item table-bg--black"><span>10</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--four__item table-bg--black"><span>11</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--four__item table-bg--red"><span>12</span>
+                        </div>
                       </div>
 
                     </div>
@@ -93,24 +141,36 @@
                     <div class="table__header__center__body__item__grid">
 
                       <div class="table__header__center__body__item__grid--one">
-                        <div class="table__header__center__body__item__grid--one__item table-bg--black"><span>13</span></div>
-                        <div class="table__header__center__body__item__grid--one__item table-bg--red"><span>14</span></div>
-                        <div class="table__header__center__body__item__grid--one__item table-bg--black"><span>15</span></div>
+                        <div class="table__header__center__body__item__grid--one__item table-bg--black"><span>13</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--one__item table-bg--red"><span>14</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--one__item table-bg--black"><span>15</span>
+                        </div>
                       </div>
                       <div class="table__header__center__body__item__grid--two">
-                        <div class="table__header__center__body__item__grid--two__item table-bg--red"><span>16</span></div>
-                        <div class="table__header__center__body__item__grid--two__item table-bg--black"><span>17</span></div>
-                        <div class="table__header__center__body__item__grid--two__item table-bg--red"><span>18</span></div>
+                        <div class="table__header__center__body__item__grid--two__item table-bg--red"><span>16</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--two__item table-bg--black"><span>17</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--two__item table-bg--red"><span>18</span>
+                        </div>
                       </div>
                       <div class="table__header__center__body__item__grid--three">
-                        <div class="table__header__center__body__item__grid--three__item table-bg--red"><span>19</span></div>
-                        <div class="table__header__center__body__item__grid--three__item table-bg--black"><span>20</span></div>
-                        <div class="table__header__center__body__item__grid--three__item table-bg--red"><span>21</span></div>
+                        <div class="table__header__center__body__item__grid--three__item table-bg--red"><span>19</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--three__item table-bg--black">
+                          <span>20</span></div>
+                        <div class="table__header__center__body__item__grid--three__item table-bg--red"><span>21</span>
+                        </div>
                       </div>
                       <div class="table__header__center__body__item__grid--four">
-                        <div class="table__header__center__body__item__grid--four__item table-bg--black"><span>22</span></div>
-                        <div class="table__header__center__body__item__grid--four__item table-bg--red"><span>23</span></div>
-                        <div class="table__header__center__body__item__grid--four__item table-bg--black"><span>24</span></div>
+                        <div class="table__header__center__body__item__grid--four__item table-bg--black"><span>22</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--four__item table-bg--red"><span>23</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--four__item table-bg--black"><span>24</span>
+                        </div>
                       </div>
 
                     </div>
@@ -122,24 +182,36 @@
                     <div class="table__header__center__body__item__grid">
 
                       <div class="table__header__center__body__item__grid--one">
-                        <div class="table__header__center__body__item__grid--one__item table-bg--red"><span>25</span></div>
-                        <div class="table__header__center__body__item__grid--one__item table-bg--black"><span>26</span></div>
-                        <div class="table__header__center__body__item__grid--one__item table-bg--red"><span>27</span></div>
+                        <div class="table__header__center__body__item__grid--one__item table-bg--red"><span>25</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--one__item table-bg--black"><span>26</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--one__item table-bg--red"><span>27</span>
+                        </div>
                       </div>
                       <div class="table__header__center__body__item__grid--two">
-                        <div class="table__header__center__body__item__grid--two__item table-bg--black"><span>28</span></div>
-                        <div class="table__header__center__body__item__grid--two__item table-bg--black"><span>29</span></div>
-                        <div class="table__header__center__body__item__grid--two__item table-bg--red"><span>30</span></div>
+                        <div class="table__header__center__body__item__grid--two__item table-bg--black"><span>28</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--two__item table-bg--black"><span>29</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--two__item table-bg--red"><span>30</span>
+                        </div>
                       </div>
                       <div class="table__header__center__body__item__grid--three">
-                        <div class="table__header__center__body__item__grid--three__item table-bg--black"><span>31</span></div>
-                        <div class="table__header__center__body__item__grid--three__item table-bg--red"><span>32</span></div>
-                        <div class="table__header__center__body__item__grid--three__item table-bg--black"><span>33</span></div>
+                        <div class="table__header__center__body__item__grid--three__item table-bg--black">
+                          <span>31</span></div>
+                        <div class="table__header__center__body__item__grid--three__item table-bg--red"><span>32</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--three__item table-bg--black">
+                          <span>33</span></div>
                       </div>
                       <div class="table__header__center__body__item__grid--four">
-                        <div class="table__header__center__body__item__grid--four__item table-bg--red"><span>34</span></div>
-                        <div class="table__header__center__body__item__grid--four__item table-bg--black"><span>35</span></div>
-                        <div class="table__header__center__body__item__grid--four__item table-bg--red"><span>36</span></div>
+                        <div class="table__header__center__body__item__grid--four__item table-bg--red"><span>34</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--four__item table-bg--black"><span>35</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--four__item table-bg--red"><span>36</span>
+                        </div>
                       </div>
 
                     </div>
