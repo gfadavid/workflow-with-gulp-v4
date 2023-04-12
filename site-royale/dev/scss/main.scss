@@ -162,7 +162,7 @@ p {
                 display: flex;
                 &__left {
                     // background-color: lightcoral;
-                    width: $width--1;
+                    width: $width--2;
                     height: $height--4;
                     display: flex;
                     justify-content: center;
@@ -170,6 +170,9 @@ p {
                     border-top: $border--2;
                     border-bottom: $border--2;
                     position: relative;
+                    @media screen and (min-width: 992px) {
+                        width: $width--1;
+                    }
                     &::before,
                     &::after {
                         content: "";
@@ -190,7 +193,10 @@ p {
                         width: calc(152px / 2);
                     }
                     &__number {
-                        font-size: $fsz--2;
+                        font-size: $fsz--5;
+                        @media screen and (min-width: 992px) {
+                            font-size: $fsz--2;
+                        }
                     }
                 }
                 &__center {
@@ -230,7 +236,10 @@ p {
                                         display: flex;
                                         align-items: center;
                                         justify-content: center;
-                                        height: $height--5;
+                                        height: 25px; /* NÚMERO MÁGICO */
+                                        @media screen and (min-width: 992px) {
+                                            height: $height--5;
+                                        }
                                         > span {
                                             line-height: 1;
                                             margin-top: -3px; /* NÚMERO MÁGICO */
@@ -245,8 +254,12 @@ p {
                                             margin-right: auto;
                                             margin-left: auto;
                                             z-index: 10;
-                                            width: $width--4;
-                                            height: $height--6;
+                                            height: calc(40% - 10px);
+                                            width: calc(100% - 3px);
+                                            @media screen and (min-width: 992px) {
+                                                width: $width--4;
+                                                height: $height--6;
+                                            }
                                         }
                                         @at-root {
                                             .table-bg--red {
@@ -282,9 +295,11 @@ p {
                             &__item {
                                 height: $height--3;
                                 p {
-                                    font-size: $fsz--4;
                                     position: relative;
                                     top: -2px; /* NÚMERO MÁGICO */
+                                    @media screen and (min-width: 992px) {
+                                        font-size: $fsz--4;
+                                    }
                                 }
                                 &__subitem {
                                     height: $height--3;
@@ -323,6 +338,11 @@ p {
                         &--two {
                             &__item {
                                 border-bottom: none;
+                                p {
+                                    @media screen and (min-width: 992px) {
+                                        font-size: $fsz--4;
+                                    }
+                                }
                             }
                             &__item.even {
                                 .table__header__center__footer--two__item__subitem {
@@ -353,17 +373,22 @@ p {
                 }
                 &__right {
                     // background-color: lightskyblue;
-                    width: $width--1;
+                    width: $width--2;
                     height: $height--4;
                     display: flex;
                     flex-direction: column;
                     border: $border--2;
                     border-left: none;
+                    @media screen and (min-width: 992px) {
+                        width: $width--1;
+                    }
                     &__item {
                         text-align: center;
-                        font-size: $fsz--3;
                         height: $height--3;
                         position: relative;
+                        @media screen and (min-width: 992px) {
+                            font-size: $fsz--3;
+                        }
                         &:nth-child(even) {
                             // background-color: brown;
                             border-top: $border--2;
