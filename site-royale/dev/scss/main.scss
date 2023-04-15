@@ -159,7 +159,8 @@ p {
             // background-color: darkgoldenrod;
             margin-top: 20px;
             margin-bottom: 20px;
-            transform: skewX(20deg);
+            -webkit-transform: rotate3d(-20,0, 0,30deg);
+            transform: rotate3d(-20,0, 0,30deg);
             &__header {
                 // background-color: darkmagenta;
                 display: flex;
