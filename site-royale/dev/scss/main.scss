@@ -24,6 +24,8 @@ $fsz--2: 50px;
 $fsz--3: 35px;
 $fsz--4: 24px;
 $fsz--5: 30px;
+$fsz--6: 13px;
+$fsz--7: 16px;
 
 $fw--bold: 700;
 
@@ -109,10 +111,10 @@ p {
     // margin: 10px;
     color: $white;
     font-weight: $fw--bold;
-    @media screen  and (min-width: 992px) {
+    @media screen and (min-width: 992px) {
         box-shadow: inset 0 -10em 15em rgba(0, 0, 0, 0.5),
-                    // 0 0 0 2px rgb(255, 255, 255),
-                    0.3em 0.3em 1em rgba(0, 0, 0);
+            // 0 0 0 2px rgb(255, 255, 255),
+            0.3em 0.3em 1em rgba(0, 0, 0);
     }
     @media screen and (min-width: 992px) {
         display: flex;
@@ -420,30 +422,55 @@ p {
                 height: $height--3;
                 display: flex;
                 align-items: center;
+                position: relative;
             }
         }
         &__center {
             justify-content: center;
             flex: 1 1 calc(100% / 2);
+            @media screen and (max-width: 570px) {
+                right: -9px; /* NÚMERO MÁGICO (MÓVIL) */
+            }
         }
         &__right {
             justify-content: flex-end;
+            @media screen and (max-width: 570px) {
+                right: -20px; /* MÓVIL */
+            }
         }
     }
 
     &__top {
         // background-color: crimson;
+        position: relative;
+        right: calc(10% - 3px); /* MÓVIL */
+        @media screen and (min-width: 570px) {
+            position: static;
+        }
         &__left,
         &__right {
             // background-color: darkgoldenrod;
             @at-root {
                 .container-shadow {
-                    width: $width--3;
                     padding-right: 5px;
                     padding-left: 5px;
                     background-color: $opacity--1;
                     display: flex;
                     border-radius: $border-radius--3;
+                    width: calc($width--3 - 30px);
+                    @media screen and (min-width: 768px) {
+                        width: $width--3;
+                    }
+                }
+            }
+            i {
+                font-size: $fsz--6;
+                @media screen and (min-width: 768px) {
+                    font-size: $fsz--7;
+                }
+                &::before {
+                    position: relative;
+                    top: -2px;
                 }
             }
             &__item {
@@ -461,18 +488,29 @@ p {
                 text-align: center;
                 &-item {
                     &__betchip {
+                        // background-color: tomato;
                         display: flex;
                         justify-content: center;
+                        width: calc(100% - 30px); /* VERSIÓN MÓVIL */
+                        margin-right: auto;
+                        margin-left: auto;
+                        @media screen and (min-width: 768px) {
+                            width: 100%;
+                        }
                         &__item {
                             color: $white;
                             background-color: $black-game;
-                            width: $width--4;
-                            height: $width--4;
+                            width: calc($width--4 - 10px);
+                            height: calc($width--4 - 10px);
                             border-radius: $border-radius--4;
                             position: relative;
                             display: flex;
                             justify-content: center;
                             align-items: center;
+                            @media screen and (min-width: 768px) {
+                                width: $width--4;
+                                height: $width--4;
+                            }
                             > span {
                                 line-height: 1;
                                 // margin-top: -3px;
@@ -482,11 +520,13 @@ p {
                                     position: absolute;
                                     top: -10px;
                                     right: -13px;
-                                    border: 1px solid white;
                                     height: 34px;
                                     width: 34px;
                                     border-radius: 50%;
                                     margin-top: 1px;
+                                    @media screen and (min-width: 768px) {
+                                        border: 1px solid white;
+                                    }
                                 }
                                 &.fix-center--two {
                                     &::before {
@@ -506,13 +546,18 @@ p {
                                 content: "";
                                 border: $border--5;
                                 display: block;
-                                width: $width--4;
-                                height: $width--4;
+                                width: calc($width--4 - 10px);
+                                height: calc($width--4 - 10px);
                                 border-radius: $border-radius--4;
                                 position: absolute;
                                 z-index: 10;
                                 top: 0;
-                                right: 0;
+                                right: -3px;
+                                @media screen and (min-width: 768px) {
+                                    width: $width--4;
+                                    height: $width--4;
+                                    right: 0;
+                                }
                             }
                             &::after {
                                 z-index: 5;
@@ -545,6 +590,28 @@ p {
                         }
                     }
                 }
+                @at-root {
+                    .carousel-control-prev-icon,
+                    .carousel-control-next-icon {
+                        position: relative;
+                    }
+                    @at-root {
+                        .carousel-control-prev-icon {
+                            left: -15px;
+                        }
+                        .carousel-control-next-icon {
+                            right: -15px;
+                        }
+                        // @media screen and (min-width: 768px) {
+                        //     .carousel-control-prev-icon {
+                        //         left: -12px;
+                        //     }
+                        //     .carousel-control-next-icon {
+                        //         right: -12px;
+                        //     }
+                        // }
+                    }
+                }
             }
         }
         &__right {
@@ -567,6 +634,16 @@ p {
                     .main-footer__top__right__item {
                         .btn--1 {
                             opacity: $opacity--3;
+                        }
+                        &:first-child {
+                            span {
+                                position: relative;
+                                top: -2px;
+                                font-size: $fsz--6;
+                                @media screen and (min-width: 768px) {
+                                    font-size: $fsz--7;
+                                }
+                            }
                         }
                     }
                 }
@@ -616,9 +693,13 @@ p {
     &--1 {
         background-color: $gray--3;
         color: $black-game;
-        width: $width--2;
-        height: $width--2;
+        width: calc($width--2 - 5px); /* MÓVIL */
+        height: calc($width--2 - 5px); /* MÓVIL */
         border-radius: $border-radius--4;
+        @media screen and (min-width: 768px) {
+            width: $width--2;
+            height: $width--2;
+        }
 
         display: flex;
         justify-content: center;
