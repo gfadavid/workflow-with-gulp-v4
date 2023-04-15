@@ -159,8 +159,8 @@ p {
             // background-color: darkgoldenrod;
             margin-top: 20px;
             margin-bottom: 20px;
-            -webkit-transform: rotate3d(-20,0, 0,30deg);
-            transform: rotate3d(-20,0, 0,30deg);
+            -webkit-transform: rotate3d(-1, 0, 0,31deg);
+            transform: rotate3d(-1, 0, 0,31deg);
             &__header {
                 // background-color: darkmagenta;
                 display: flex;
@@ -668,6 +668,12 @@ p {
         &__left {
             // background-color: darkgoldenrod;
             color: $white;
+            display: flex;
+            .btn--2 {
+                &:nth-child(2) {
+                    margin-left: -8px; /* NÚMERO MÁGICO */
+                }
+            }
         }
         &__center {
             // background-color: aquamarine;
@@ -692,7 +698,8 @@ p {
 
 /* BOTONES */
 .btn {
-    &--1 {
+    &--1,
+    &--2 {
         background-color: $gray--3;
         color: $black-game;
         width: calc($width--2 - 5px); /* MÓVIL */
@@ -711,5 +718,9 @@ p {
             background-color: $black-game;
             color: $white;
         }
+    }
+    &--2 {
+        background-color: transparent;
+        color: $white;
     }
 }
