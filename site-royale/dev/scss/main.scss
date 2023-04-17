@@ -133,6 +133,7 @@ p {
                 width: 100%;
             }
             @at-root {
+                .logo,
                 .counter {
                     background-color: $black-game;
                     border: $border--1;
@@ -149,6 +150,23 @@ p {
                     align-items: center;
                     justify-content: center;
                     font-size: $fsz--5;
+                }
+                .logo {
+                    background-color: transparent;
+                    border: none;
+                    border-radius: 0;
+                    right: 0;
+                    left: 13%;
+                    @media screen and (min-width: 992px) {
+                        left: 15%;
+                    }
+                    left: 15%;
+                    &__title {
+                        text-transform: uppercase;
+                        text-align: center;
+                        font-weight: $fw--bold;
+                        font-size: $fsz--4;
+                    }
                 }
             }
             video {
