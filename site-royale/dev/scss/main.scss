@@ -421,6 +421,48 @@ p {
 /* FOOTER */
 .main-footer {
     // background-color: darkkhaki;
+    @media screen and (min-width: 768px) {
+        margin-top: -70px;
+    }
+    &__min-max {
+        // background-color: darkgoldenrod;
+        display: flex;
+        justify-content: center;
+        margin-top: -13px; /* MÓVIL */
+        @media screen and (min-width: 768px) {
+            display: inline-block;
+            margin-top: 0;
+            position: relative;
+            top: -25px;
+            left: -50px;
+        }
+        &__item {
+            // background-color: darkcyan;
+            > span,
+            > p {
+                font-size: $fsz--1;
+                font-style: italic;
+            }
+            > span {
+                text-transform: uppercase;
+                font-weight: $fw--bold;
+                display: block;
+                line-height: 1;
+            }
+            > p {
+                font-weight: normal;
+                margin-top: 2px;       
+            }
+            &:nth-child(even) {
+                // background-color: darkolivegreen;
+                margin-left: 10px;
+                @media screen and (min-width: 768px) {
+                    margin-left: 0;
+                    margin-top: 5px;
+                }
+            }
+        }
+    }
     &__top {
         // padding: 10px;
         display: flex;
