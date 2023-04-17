@@ -382,20 +382,22 @@ p {
                 &__right {
                     // background-color: lightskyblue;
                     width: $width--2;
-                    height: $height--4;
+                    height: calc($height--4 - 75px);
                     display: flex;
                     flex-direction: column;
                     border: $border--2;
                     border-left: none;
                     @media screen and (min-width: 992px) {
                         width: $width--1;
+                        height: $height--4;
                     }
                     &__item {
                         text-align: center;
-                        height: $height--3;
+                        height: calc($height--3 - 25px); /* MÓVIL */
                         position: relative;
                         @media screen and (min-width: 992px) {
                             font-size: $fsz--3;
+                            height: $height--3;
                         }
                         &:nth-child(even) {
                             // background-color: brown;
