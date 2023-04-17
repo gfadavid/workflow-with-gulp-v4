@@ -162,7 +162,7 @@ p {
             // background-color: darkgoldenrod;
             margin-bottom: 20px;
             transform: rotateX(31deg);
-            @media screen and (min-width: 768px) {
+            @media screen and (min-width: 992px) {
                 margin-top: -20px;
             }
             &__header {
@@ -171,7 +171,7 @@ p {
                 &__left {
                     // background-color: lightcoral;
                     width: $width--2;
-                    height: $height--4;
+                    height: 127px; /* MÓVIL */
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -180,6 +180,7 @@ p {
                     position: relative;
                     @media screen and (min-width: 992px) {
                         width: $width--1;
+                        height: $height--4;
                     }
                     &::before,
                     &::after {
@@ -190,9 +191,16 @@ p {
                         transform: rotateZ(108deg);
                     }
                     &::before {
-                        top: 39px;
-                        left: -56px;
-                        width: 85px;
+                        top: 26px;
+                        left: -45px;
+                        width: 63px;
+                        transform: rotate(116deg);
+                        @media screen and (min-width: 992px) {
+                            transform: rotate(108deg);
+                            top: 39px;
+                            left: -56px;
+                            width: 85px;
+                        }
                     }
                     &::after {
                         bottom: 34px;
@@ -421,7 +429,7 @@ p {
 /* FOOTER */
 .main-footer {
     // background-color: darkkhaki;
-    @media screen and (min-width: 768px) {
+    @media screen and (min-width: 992px) {
         margin-top: -70px;
     }
     &__min-max {
@@ -429,7 +437,7 @@ p {
         display: flex;
         justify-content: center;
         margin-top: -13px; /* MÓVIL */
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 992px) {
             display: inline-block;
             margin-top: 0;
             position: relative;
@@ -456,7 +464,7 @@ p {
             &:nth-child(even) {
                 // background-color: darkolivegreen;
                 margin-left: 10px;
-                @media screen and (min-width: 768px) {
+                @media screen and (min-width: 992px) {
                     margin-left: 0;
                     margin-top: 5px;
                 }
@@ -508,14 +516,14 @@ p {
                     display: flex;
                     border-radius: $border-radius--3;
                     width: calc($width--3 - 30px);
-                    @media screen and (min-width: 768px) {
+                    @media screen and (min-width: 992px) {
                         width: $width--3;
                     }
                 }
             }
             i {
                 font-size: $fsz--6;
-                @media screen and (min-width: 768px) {
+                @media screen and (min-width: 992px) {
                     font-size: $fsz--7;
                 }
                 &::before {
@@ -544,7 +552,7 @@ p {
                         width: calc(100% - 30px); /* VERSIÓN MÓVIL */
                         margin-right: auto;
                         margin-left: auto;
-                        @media screen and (min-width: 768px) {
+                        @media screen and (min-width: 992px) {
                             width: 100%;
                         }
                         &__item {
@@ -557,7 +565,7 @@ p {
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            @media screen and (min-width: 768px) {
+                            @media screen and (min-width: 992px) {
                                 width: $width--4;
                                 height: $width--4;
                             }
@@ -574,7 +582,7 @@ p {
                                     width: 34px;
                                     border-radius: 50%;
                                     margin-top: 1px;
-                                    @media screen and (min-width: 768px) {
+                                    @media screen and (min-width: 992px) {
                                         border: 1px solid white;
                                     }
                                 }
@@ -603,7 +611,7 @@ p {
                                 z-index: 10;
                                 top: 0;
                                 right: -3px;
-                                @media screen and (min-width: 768px) {
+                                @media screen and (min-width: 992px) {
                                     width: $width--4;
                                     height: $width--4;
                                     right: 0;
@@ -652,7 +660,7 @@ p {
                         .carousel-control-next-icon {
                             right: -15px;
                         }
-                        // @media screen and (min-width: 768px) {
+                        // @media screen and (min-width: 992px) {
                         //     .carousel-control-prev-icon {
                         //         left: -12px;
                         //     }
@@ -690,7 +698,7 @@ p {
                                 position: relative;
                                 top: -2px;
                                 font-size: $fsz--6;
-                                @media screen and (min-width: 768px) {
+                                @media screen and (min-width: 992px) {
                                     font-size: $fsz--7;
                                 }
                             }
@@ -753,7 +761,7 @@ p {
         width: calc($width--2 - 5px); /* MÓVIL */
         height: calc($width--2 - 5px); /* MÓVIL */
         border-radius: $border-radius--4;
-        @media screen and (min-width: 768px) {
+        @media screen and (min-width: 992px) {
             width: $width--2;
             height: $width--2;
         }
