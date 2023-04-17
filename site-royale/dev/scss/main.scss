@@ -155,12 +155,14 @@ p {
                 position: relative;
             }
         }
+        .perspective {
+            perspective: 700px;
+        }
         .table {
             // background-color: darkgoldenrod;
-            margin-top: 20px;
+            // margin-top: 20px;
             margin-bottom: 20px;
-            -webkit-transform: rotate3d(-1, 0, 0,31deg);
-            transform: rotate3d(-1, 0, 0,31deg);
+            transform: rotateX(31deg);
             &__header {
                 // background-color: darkmagenta;
                 display: flex;
