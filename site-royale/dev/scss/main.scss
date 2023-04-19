@@ -68,6 +68,7 @@ $border--5: 2px dashed $white;
 $opacity--1: rgb(0, 0, 0, 0.75);
 $opacity--2: rgb(0, 0, 0, 0.5); // DISABLED
 $opacity--3: 0.5; // DISABLED
+$opacity--4: 1; // DISABLED
 
 body {
     // background-color: $body-bg;
@@ -670,13 +671,35 @@ p {
                     .carousel-control-prev-icon,
                     .carousel-control-next-icon {
                         position: relative;
+                        width: calc($width--4 - 10px);
+                        height: calc($width--4 - 10px);
+                        background-size: 18px; /* NÚMERO MÁGICO */
+                        border: 2px solid white;
+                        border-radius: $border-radius--4;
+                        background-color: rgba(255, 255, 255, .20);
+                        @media screen and (min-width: 992px) {
+                            width: $width--4;
+                            height: $width--4;
+                        }
                     }
                     @at-root {
-                        .carousel-control-prev-icon {
-                            left: -15px;
+                        .carousel-control-prev {
+                            opacity: $opacity--4;
+                            &-icon {
+                                left: -15px;
+                                @media screen and (min-width: 992px) {
+                                    background-position-x: 8px; /* NÚMERO MÁGICO */
+                                }
+                            }
                         }
-                        .carousel-control-next-icon {
-                            right: -15px;
+                        .carousel-control-next {
+                            opacity: $opacity--4;
+                            &-icon {
+                                right: -15px;
+                                @media screen and (min-width: 992px) {
+                                    background-position-x: 10px; /* NÚMERO MÁGICO */
+                                }
+                            }
                         }
                         // @media screen and (min-width: 992px) {
                         //     .carousel-control-prev-icon {
