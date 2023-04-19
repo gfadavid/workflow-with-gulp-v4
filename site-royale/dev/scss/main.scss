@@ -526,6 +526,8 @@ p {
         right: calc(10% - 3px); /* MÓVIL */
         @media screen and (min-width: 570px) {
             position: static;
+            margin-top: 10px;
+            margin-bottom: 20px;
         }
         &__left,
         &__right {
