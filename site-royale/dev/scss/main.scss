@@ -180,10 +180,10 @@ p {
         .table {
             // background-color: darkgoldenrod;
             margin-bottom: 20px;
-            transform: rotateX(31deg);
-            @media screen and (min-width: 992px) {
-                margin-top: -20px;
-            }
+            transform: rotateX(20deg);
+            // @media screen and (min-width: 992px) {
+            //     margin-top: -20px;
+            // }
             &__header {
                 // background-color: darkmagenta;
                 display: flex;
