@@ -20,7 +20,7 @@ $black-game: #0b0f07;
 $font-family--1: "Noto Serif Khojki", serif;
 
 $fsz--1: 11px;
-$fsz--2: 50px;
+$fsz--2: 70px;
 $fsz--3: 35px;
 $fsz--4: 24px;
 $fsz--5: 30px;
@@ -228,9 +228,12 @@ p {
                         width: calc(152px / 2);
                     }
                     &__number {
-                        font-size: $fsz--5;
+                        font-size: $fsz--2;
+                        margin-top: -5px;
+                        margin-left: -18px;
                         @media screen and (min-width: 992px) {
-                            font-size: $fsz--2;
+                            margin-top: 10px;
+                            margin-left: -12px;
                         }
                     }
                 }
