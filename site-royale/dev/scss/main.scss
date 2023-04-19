@@ -566,6 +566,9 @@ p {
             .carousel {
                 width: 100%;
                 text-align: center;
+                &-inner {
+                    overflow: visible;
+                }
                 &-item {
                     &__betchip {
                         // background-color: tomato;
@@ -588,34 +591,36 @@ p {
                             justify-content: center;
                             align-items: center;
                             @media screen and (min-width: 992px) {
-                                width: $width--4;
-                                height: $width--4;
+                                border: 2px solid white;
+                                width: calc($width--4 + 15px);
+                                height: calc($width--4 + 15px);
                             }
                             > span {
                                 line-height: 1;
                                 // margin-top: -3px;
-                                position: relative;
-                                &::before {
-                                    content: "";
-                                    position: absolute;
-                                    top: -10px;
-                                    right: -13px;
-                                    height: 34px;
-                                    width: 34px;
-                                    border-radius: 50%;
-                                    margin-top: 1px;
-                                    @media screen and (min-width: 992px) {
-                                        border: 1px solid white;
-                                    }
-                                }
-                                &.fix-center--two {
-                                    &::before {
-                                        right: -9px;
-                                    }
-                                }
+                                // position: relative;
+                                // &::before {
+                                //     content: "";
+                                //     position: absolute;
+                                //     top: -10px;
+                                //     right: -13px;
+                                //     height: 34px;
+                                //     width: 34px;
+                                //     border-radius: 50%;
+                                //     margin-top: 1px;
+                                //     @media screen and (min-width: 992px) {
+                                //         border: 1px solid white;
+                                //     }
+                                // }
+                                // &.fix-center--two {
+                                //     &::before {
+                                //         right: -9px;
+                                //     }
+                                // }
                                 > p {
-                                    position: relative;
-                                    top: -3px;
+                                    @media screen and (min-width: 992px) {
+                                        font-size: $fsz--4;
+                                    }
                                 }
                             }
                             &:hover {
@@ -634,9 +639,10 @@ p {
                                 top: 0;
                                 right: -3px;
                                 @media screen and (min-width: 992px) {
-                                    width: $width--4;
-                                    height: $width--4;
-                                    right: 0;
+                                    width: calc($width--4 + 20px);
+                                    height: calc($width--4 + 20px);
+                                    top: -4px;
+                                    right: -4px; /* NÚMEROP MÁGICO */
                                 }
                             }
                             &::after {
