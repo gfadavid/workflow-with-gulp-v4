@@ -578,6 +578,7 @@ p {
                 bottom: -15px;
                 @media screen and (min-width: 992px) {
                     margin-top: 0;
+                    bottom: 0;
                 }
                 &-inner {
                     @media screen and (min-width: 992px) {
