@@ -472,7 +472,7 @@ p {
             margin-top: 0;
             position: relative;
             top: -25px;
-            left: -50px;
+            left: 60px;
         }
         &__item {
             // background-color: darkcyan;
@@ -546,6 +546,9 @@ p {
         &__left,
         &__right {
             // background-color: darkgoldenrod;
+            @media screen and (min-width: 992px) {
+                justify-content: center;
+            }
             @at-root {
                 .container-shadow {
                     padding-right: 5px;
@@ -697,6 +700,9 @@ p {
                         .carousel-control-prev {
                             opacity: $opacity--4;
                             left: 30px;
+                            @media screen and (min-width: 1200px) {
+                                left: 15%;
+                            }
                             &-icon {
                                 left: -25px;
                                 @media screen and (min-width: 992px) {
@@ -707,6 +713,9 @@ p {
                         .carousel-control-next {
                             opacity: $opacity--4;
                             right: 30px;
+                            @media screen and (min-width: 1200px) {
+                                right: 15%;
+                            }
                             &-icon {
                                 right: -25px;
                                 @media screen and (min-width: 992px) {
