@@ -505,6 +505,12 @@ p {
         // padding: 10px;
         display: flex;
         justify-content: space-between;
+        padding-right: 25px;
+        padding-left: 25px;
+        @media screen and (min-width:  992px) {
+            padding-right: 0;
+            padding-left: 0;
+        }
         @at-root {
             [class*="main-footer__top__"] {
                 flex: 0 0 calc(100% / 4);
@@ -690,6 +696,7 @@ p {
                     @at-root {
                         .carousel-control-prev {
                             opacity: $opacity--4;
+                            left: 30px;
                             &-icon {
                                 left: -25px;
                                 @media screen and (min-width: 992px) {
@@ -699,6 +706,7 @@ p {
                         }
                         .carousel-control-next {
                             opacity: $opacity--4;
+                            right: 30px;
                             &-icon {
                                 right: -25px;
                                 @media screen and (min-width: 992px) {
