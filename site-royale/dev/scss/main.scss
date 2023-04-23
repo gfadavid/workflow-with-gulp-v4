@@ -281,6 +281,10 @@ p {
                                         > span {
                                             line-height: 1;
                                             margin-top: -3px; /* NÚMERO MÁGICO */
+                                            font-size: $fsz--1;
+                                            @media screen and (min-width: 992px) {
+                                                font-size: $fsz--7;
+                                            }
                                         }
                                         &::before {
                                             content: "";
@@ -452,6 +456,7 @@ p {
 .main-footer {
     // background-color: darkkhaki;
     margin-top: -15px;
+    position: relative;
     @media screen and (min-width: 992px) {
         margin-top: -70px;
     }
@@ -484,7 +489,7 @@ p {
             }
             > p {
                 font-weight: normal;
-                margin-top: 2px;       
+                margin-top: 2px;
             }
             &:nth-child(even) {
                 // background-color: darkolivegreen;
@@ -499,6 +504,7 @@ p {
     &__top {
         // padding: 10px;
         display: flex;
+        justify-content: space-between;
         @at-root {
             [class*="main-footer__top__"] {
                 flex: 0 0 calc(100% / 4);
@@ -511,22 +517,21 @@ p {
         &__center {
             justify-content: center;
             flex: 1 1 calc(100% / 2);
-            @media screen and (max-width: 570px) {
-                right: -9px; /* NÚMERO MÁGICO (MÓVIL) */
-            }
+            // @media screen and (max-width: 570px) {
+            //     right: -9px; /* NÚMERO MÁGICO (MÓVIL) */
+            // }
         }
         &__right {
             justify-content: flex-end;
-            @media screen and (max-width: 570px) {
-                right: -20px; /* MÓVIL */
-            }
+            // @media screen and (max-width: 570px) {
+            //     right: -20px; /* MÓVIL */
+            // }
         }
     }
 
     &__top {
         // background-color: crimson;
         position: relative;
-        right: calc(10% - 3px); /* MÓVIL */
         @media screen and (min-width: 570px) {
             position: static;
             margin-top: 10px;
@@ -570,74 +575,52 @@ p {
         }
         &__center {
             // background-color: aquamarine;
+            position: absolute;
+            right: 0;
+            left: 0;
+            @media screen and (min-width: 992px) {
+                position: static;
+            }
             .carousel {
                 width: 100%;
                 text-align: center;
                 margin-top: 25px;
                 position: relative;
-                bottom: -15px;
+                bottom: -23px; /* NÚMEOR MÁGICO (MÓVIL) */
                 @media screen and (min-width: 992px) {
                     margin-top: 0;
                     bottom: 0;
                 }
                 &-inner {
-                    @media screen and (min-width: 992px) {
-                        height: 63px;
-                        padding-top: 3px;
-                    }
+                    // height: 63px;
+                    // padding-top: 3px;
+                    // @media screen and (min-width: 992px) {
+                    // }
                 }
                 &-item {
                     &__betchip {
                         // background-color: tomato;
+                        height: 60px;
                         display: flex;
                         justify-content: center;
-                        width: calc(100% - 30px); /* VERSIÓN MÓVIL */
+                        align-items: center;
                         margin-right: auto;
                         margin-left: auto;
-                        @media screen and (min-width: 992px) {
-                            width: 100%;
-                        }
                         &__item {
                             color: $white;
                             background-color: $black-game;
-                            width: calc($width--4 - 10px);
-                            height: calc($width--4 - 10px);
                             border-radius: $border-radius--4;
                             position: relative;
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            @media screen and (min-width: 992px) {
-                                border: 2px solid white;
-                                width: calc($width--4 + 15px);
-                                height: calc($width--4 + 15px);
-                            }
+                            border: 2px solid white;
+                            width: calc($width--4 + 15px);
+                            height: calc($width--4 + 15px);
                             > span {
                                 line-height: 1;
-                                // margin-top: -3px;
-                                // position: relative;
-                                // &::before {
-                                //     content: "";
-                                //     position: absolute;
-                                //     top: -10px;
-                                //     right: -13px;
-                                //     height: 34px;
-                                //     width: 34px;
-                                //     border-radius: 50%;
-                                //     margin-top: 1px;
-                                //     @media screen and (min-width: 992px) {
-                                //         border: 1px solid white;
-                                //     }
-                                // }
-                                // &.fix-center--two {
-                                //     &::before {
-                                //         right: -9px;
-                                //     }
-                                // }
                                 > p {
-                                    @media screen and (min-width: 992px) {
-                                        font-size: $fsz--4;
-                                    }
+                                    font-size: $fsz--4;
                                 }
                             }
                             &:hover {
@@ -648,19 +631,15 @@ p {
                                 content: "";
                                 border: $border--5;
                                 display: block;
-                                width: calc($width--4 - 10px);
-                                height: calc($width--4 - 10px);
                                 border-radius: $border-radius--4;
                                 position: absolute;
                                 z-index: 10;
                                 top: 0;
                                 right: -3px;
-                                @media screen and (min-width: 992px) {
-                                    width: calc($width--4 + 20px);
-                                    height: calc($width--4 + 20px);
-                                    top: -4px;
-                                    right: -4px; /* NÚMEROP MÁGICO */
-                                }
+                                width: calc($width--4 + 20px);
+                                height: calc($width--4 + 20px);
+                                top: -4px;
+                                right: -4px; /* NÚMEROP MÁGICO */
                             }
                             &::after {
                                 z-index: 5;
@@ -702,7 +681,7 @@ p {
                         background-size: 18px; /* NÚMERO MÁGICO */
                         border: 2px solid white;
                         border-radius: $border-radius--4;
-                        background-color: rgba(255, 255, 255, .20);
+                        background-color: rgba(255, 255, 255, 0.2);
                         @media screen and (min-width: 992px) {
                             width: $width--4;
                             height: $width--4;
@@ -727,14 +706,6 @@ p {
                                 }
                             }
                         }
-                        // @media screen and (min-width: 992px) {
-                        //     .carousel-control-prev-icon {
-                        //         left: -12px;
-                        //     }
-                        //     .carousel-control-next-icon {
-                        //         right: -12px;
-                        //     }
-                        // }
                     }
                 }
             }
@@ -778,7 +749,7 @@ p {
 
     &__bottom {
         background-color: $black-game;
-        margin-top: 40px; /* MÓVIL */
+        margin-top: 50px; /* MÓVIL */
         border-top: $border--3;
         font-size: $fsz--1;
         display: flex;
