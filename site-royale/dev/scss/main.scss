@@ -451,6 +451,7 @@ p {
 /* FOOTER */
 .main-footer {
     // background-color: darkkhaki;
+    margin-top: -15px;
     @media screen and (min-width: 992px) {
         margin-top: -70px;
     }
@@ -458,8 +459,10 @@ p {
         // background-color: darkgoldenrod;
         display: flex;
         justify-content: center;
-        margin-top: -13px; /* MÓVIL */
+        position: relative;
+        bottom: -12px; /* MÓVIL */
         @media screen and (min-width: 992px) {
+            position: static;
             display: inline-block;
             margin-top: 0;
             position: relative;
@@ -540,7 +543,9 @@ p {
                     display: flex;
                     border-radius: $border-radius--3;
                     width: calc($width--3 - 30px);
+                    margin-top: -55px;
                     @media screen and (min-width: 992px) {
+                        margin-top: 0;
                         width: $width--3;
                     }
                 }
@@ -568,8 +573,17 @@ p {
             .carousel {
                 width: 100%;
                 text-align: center;
+                margin-top: 25px;
+                position: relative;
+                bottom: -15px;
+                @media screen and (min-width: 992px) {
+                    margin-top: 0;
+                }
                 &-inner {
-                    overflow: visible;
+                    @media screen and (min-width: 992px) {
+                        height: 63px;
+                        padding-top: 3px;
+                    }
                 }
                 &-item {
                     &__betchip {
@@ -697,7 +711,7 @@ p {
                         .carousel-control-prev {
                             opacity: $opacity--4;
                             &-icon {
-                                left: -15px;
+                                left: -25px;
                                 @media screen and (min-width: 992px) {
                                     background-position-x: 8px; /* NÚMERO MÁGICO */
                                 }
@@ -706,7 +720,7 @@ p {
                         .carousel-control-next {
                             opacity: $opacity--4;
                             &-icon {
-                                right: -15px;
+                                right: -25px;
                                 @media screen and (min-width: 992px) {
                                     background-position-x: 10px; /* NÚMERO MÁGICO */
                                 }
@@ -763,12 +777,15 @@ p {
 
     &__bottom {
         background-color: $black-game;
-        margin-top: 10px;
+        margin-top: 40px; /* MÓVIL */
         border-top: $border--3;
         font-size: $fsz--1;
         display: flex;
         justify-content: space-between;
         align-items: center;
+        @media screen and (min-width: 992px) {
+            margin-top: 10px;
+        }
         p {
             margin-bottom: 0;
             color: $white;
