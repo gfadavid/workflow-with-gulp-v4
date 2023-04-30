@@ -311,10 +311,10 @@ p {
                                         }
                                         @at-root {
                                             .table-bg--red {
-                                                background-color: $red-game;
+                                                background-color: lighten($color: $red-game, $amount: 10);
                                             }
                                             .table-bg--black {
-                                                background-color: $black-game;
+                                                background-color: darken($color: $black-game, $amount: 10);
                                             }
                                         }
                                         &:nth-child(even) {
@@ -399,12 +399,12 @@ p {
                             &__item.even {
                                 .table__header__center__footer--two__item__subitem {
                                     position: relative;
-                                    background-color: $red-game;
+                                    background-color: lighten($color: $red-game, $amount: 10);;
                                     > span {
                                         visibility: hidden;
                                     }
                                     &:nth-child(even) {
-                                        background-color: $black-game;
+                                        background-color: darken($black-game, $amount: 10);
                                     }
                                     // &::before {
                                     //     content: "";
