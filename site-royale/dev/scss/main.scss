@@ -165,7 +165,7 @@ p {
                     left: 15%;
                     &__title {
                         text-transform: uppercase;
-                        text-align: center;
+                        text-align: center;font-family: $font-family--2;
                         font-weight: $fw--bold;
                         font-size: $fsz--4;
                     }
@@ -177,6 +177,9 @@ p {
         }
         .perspective {
             perspective: 400px;
+            @media screen and (min-width: 1400px) {
+                perspective: 600px;
+            }
         }
         .table {
             // background-color: darkgoldenrod;
