@@ -196,7 +196,7 @@ p {
                 &__left {
                     // background-color: lightcoral;
                     width: $width--2;
-                    height: 127px; /* MÓVIL */
+                    height: 62px; /* MÓVIL */
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -216,10 +216,10 @@ p {
                         transform: rotateZ(108deg);
                     }
                     &::before {
-                        top: 26px;
-                        left: -45px;
-                        width: 63px;
-                        transform: rotate(116deg);
+                        top: 12px;
+                        left: -19px;
+                        width: 29px;
+                        transform: rotate(108deg);
                         @media screen and (min-width: 992px) {
                             transform: rotate(108deg);
                             top: 39px;
@@ -228,16 +228,15 @@ p {
                         }
                     }
                     &::after {
-                        bottom: 34px;
-                        left: -52px;
-                        transform: rotateZ(-110deg);
-                        width: calc(152px / 2);
+                        bottom: 16px;
+                        left: -22px;
+                        transform: rotateZ(-104deg);
+                        width: 35px;
                     }
                     &__number {
                         font-family: $font-family--2;
                         font-size: $fsz--5;
-                        margin-top: -5px;
-                        margin-left: -18px;
+                        margin-left: -5px;
                         line-height: 1;
                         opacity: $opacity--3;
                         @media screen and (min-width: 992px) {
@@ -340,6 +339,7 @@ p {
                         border-top: none;
                         p {
                             font-family: $font-family--2;
+                            font-size: 14px;
                             opacity: $opacity--3;
                         }
                         &--one,
@@ -453,7 +453,7 @@ p {
                 &__right {
                     // background-color: lightskyblue;
                     width: $width--2;
-                    height: calc($height--4 - 75px);
+                    height: 62px;
                     display: flex;
                     flex-direction: column;
                     border: $border--2;
@@ -466,6 +466,7 @@ p {
                         text-align: center;
                         height: calc($height--3 - 25px); /* MÓVIL */
                         position: relative;
+                        font-size: 14px;
                         @media screen and (min-width: 992px) {
                             font-size: $fsz--3;
                             height: $height--3;
