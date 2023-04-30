@@ -136,6 +136,10 @@ p {
             &,
             .bg-ruleta {
                 width: 100%;
+                height: 25vh;
+                @media screen and (min-width: 992px) {
+                    height: auto;
+                }
             }
             @at-root {
                 .logo,
@@ -147,7 +151,7 @@ p {
                     position: absolute;
                     top: calc($width--2 - 20px);
                     // right: calc($width--2 - 20px);
-                    right: 15%;
+                    right: 3%;
                     border-radius: $border-radius--4;
                     width: $width--1;
                     height: $width--1;
@@ -161,16 +165,23 @@ p {
                     border: none;
                     border-radius: 0;
                     right: 0;
-                    left: 13%;
+                    left: 3%;
                     @media screen and (min-width: 992px) {
                         left: 15%;
                     }
-                    left: 15%;
                     &__title {
                         text-transform: uppercase;
                         text-align: center;font-family: $font-family--2;
                         font-weight: $fw--bold;
-                        font-size: $fsz--4;
+                        font-size: $fsz--7;
+                        @media screen and (min-width: 992px) {
+                            font-size: $fsz--4;
+                        }
+                    }
+                }
+                .counter {
+                    @media screen and (min-width: 992px) {
+                        right: 15%;
                     }
                 }
             }
