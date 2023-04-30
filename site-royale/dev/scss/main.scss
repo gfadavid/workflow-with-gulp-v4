@@ -508,7 +508,7 @@ p {
         display: flex;
         justify-content: center;
         position: relative;
-        bottom: -12px; /* MÓVIL */
+        bottom: -2px; /* MÓVIL */
         @media screen and (min-width: 992px) {
             position: static;
             display: inline-block;
@@ -557,10 +557,13 @@ p {
         @at-root {
             [class*="main-footer__top__"] {
                 flex: 0 0 calc(100% / 4);
-                height: $height--3;
+                height: calc($height--3 - 20px);
                 display: flex;
                 align-items: center;
                 position: relative;
+                @media screen and (min-width: 992px) {
+                    height: $height--3;
+                }
             }
         }
         &__center {
@@ -614,7 +617,7 @@ p {
                 }
                 &::before {
                     position: relative;
-                    top: -2px;
+                    top: -1px;
                 }
             }
             &__item {
@@ -628,9 +631,11 @@ p {
         &__center {
             // background-color: aquamarine;
             position: absolute;
+            top: -12px;
             right: 0;
             left: 0;
             @media screen and (min-width: 992px) {
+                top: 0;
                 position: static;
             }
             .carousel {
@@ -812,7 +817,7 @@ p {
 
     &__bottom {
         background-color: $black-game;
-        margin-top: 50px; /* MÓVIL */
+        margin-top: 52px; /* MÓVIL */
         border-top: $border--3;
         font-size: $fsz--1;
         display: flex;
@@ -862,8 +867,8 @@ p {
     &--2 {
         background-color: $gray--3;
         color: $black-game;
-        width: calc($width--2 - 5px); /* MÓVIL */
-        height: calc($width--2 - 5px); /* MÓVIL */
+        width: calc($width--2 - 10px); /* MÓVIL */
+        height: calc($width--2 - 10px); /* MÓVIL */
         border-radius: $border-radius--4;
         @media screen and (min-width: 992px) {
             width: $width--2;
