@@ -61,7 +61,7 @@ $border-radius--4: 50%; // BOTONES DEL FOOTER
 $border--1: 2px solid $red-game;
 $border--2: 1px solid $white;
 $border--3: 1px solid rgba(255, 255, 255, 0.8);
-$border--4: 1px solid rgba(255, 255, 255, 0.5);
+$border--4: 2px solid rgba(255, 255, 255, 0.5);
 $border--5: 2px dashed $white;
 
 // OPACIDAD
@@ -299,7 +299,7 @@ p {
                                             height: calc(40% - 10px);
                                             width: calc(100% - 3px);
                                             @media screen and (min-width: 992px) {
-                                                width: $width--4;
+                                                width: calc($width--4 + 10px);
                                                 height: $height--6;
                                             }
                                         }
@@ -396,17 +396,30 @@ p {
                                     &:nth-child(even) {
                                         background-color: $black-game;
                                     }
+                                    // &::before {
+                                    //     content: "";
+                                    //     width: calc($width--4 - 10px);
+                                    //     height: calc($height--6 - 10px);
+                                    //     position: absolute;
+                                    //     right: 0;
+                                    //     left: 0;
+                                    //     margin-right: auto;
+                                    //     margin-left: auto;
+                                    //     border: $border--4;
+                                    //     transform: rotate(45deg);
+                                    // }
                                     &::before {
-                                        content: "";
-                                        width: calc($width--4 - 10px);
-                                        height: calc($height--6 - 10px);
+                                        content: '';
+                                        background-image: url('../img/rombo-alargado.png');
+                                        background-repeat: no-repeat;
+                                        background-position: center;
+                                        background-size: contain; /* MÓVIL */
                                         position: absolute;
-                                        right: 0;
-                                        left: 0;
-                                        margin-right: auto;
-                                        margin-left: auto;
-                                        border: $border--4;
-                                        transform: rotate(45deg);
+                                        width: 100%;
+                                        height: 100%;
+                                        @media screen and (min-width: 992px) {
+                                            background-size: cover;
+                                        }
                                     }
                                 }
                             }
@@ -507,7 +520,7 @@ p {
         justify-content: space-between;
         padding-right: 25px;
         padding-left: 25px;
-        @media screen and (min-width:  992px) {
+        @media screen and (min-width: 992px) {
             padding-right: 0;
             padding-left: 0;
         }
