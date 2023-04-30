@@ -177,17 +177,15 @@ p {
         }
         .perspective {
             perspective: 400px;
-            @media screen and (min-width: 1400px) {
-                perspective: 600px;
-            }
         }
         .table {
             // background-color: darkgoldenrod;
             margin-bottom: 20px;
             transform: rotateX(20deg);
-            // @media screen and (min-width: 992px) {
-            //     margin-top: -20px;
-            // }
+            @media screen and (min-width: 1400px) {
+                transform: rotateX(10deg);
+                margin-top: 10px;
+            }
             &__header {
                 // background-color: darkmagenta;
                 display: flex;
