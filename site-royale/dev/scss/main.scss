@@ -18,6 +18,7 @@ $black-game: #0b0f07;
 
 // FUENTES
 $font-family--1: "Noto Serif Khojki", serif;
+$font-family--2: "Alfa Slab One", cursive;
 
 $fsz--1: 11px;
 $fsz--2: 70px;
@@ -228,10 +229,14 @@ p {
                         width: calc(152px / 2);
                     }
                     &__number {
-                        font-size: $fsz--2;
+                        font-family: $font-family--2;
+                        font-size: $fsz--5;
                         margin-top: -5px;
                         margin-left: -18px;
+                        line-height: 1;
+                        opacity: $opacity--3;
                         @media screen and (min-width: 992px) {
+                            font-size: $fsz--2;
                             margin-top: 10px;
                             margin-left: -12px;
                         }
@@ -268,7 +273,7 @@ p {
                                     // padding: 10px;
                                     display: flex;
                                     flex-direction: column-reverse;
-                                    border-right: $border--2;
+                                    border-right: $border--4;
                                     position: relative;
                                     &__item {
                                         display: flex;
@@ -282,6 +287,7 @@ p {
                                             line-height: 1;
                                             margin-top: -3px; /* NÚMERO MÁGICO */
                                             font-size: $fsz--1;
+                                            opacity: 0.9;
                                             @media screen and (min-width: 992px) {
                                                 font-size: $fsz--7;
                                             }
@@ -327,6 +333,10 @@ p {
                         // background-color: chartreuse;
                         border: $border--2;
                         border-top: none;
+                        p {
+                            font-family: $font-family--2;
+                            opacity: $opacity--3;
+                        }
                         &--one,
                         &--two {
                             // background-color: deeppink;
@@ -338,7 +348,7 @@ p {
                                 height: $height--3;
                                 p {
                                     position: relative;
-                                    top: -2px; /* NÚMERO MÁGICO */
+                                    // top: -2px; /* NÚMERO MÁGICO */
                                     @media screen and (min-width: 992px) {
                                         font-size: $fsz--4;
                                     }
@@ -409,8 +419,8 @@ p {
                                     //     transform: rotate(45deg);
                                     // }
                                     &::before {
-                                        content: '';
-                                        background-image: url('../img/rombo-alargado.png');
+                                        content: "";
+                                        background-image: url("../img/rombo-alargado.png");
                                         background-repeat: no-repeat;
                                         background-position: center;
                                         background-size: contain; /* MÓVIL */
@@ -457,6 +467,11 @@ p {
                             transform: translateY(-55%);
                             right: 0;
                             left: 0;
+                            font-family: $font-family--2;
+                            opacity: $opacity--3;
+                            @media screen and (min-width: 992px) {
+                                margin-top: 3px;
+                            }
                         }
                     }
                 }
