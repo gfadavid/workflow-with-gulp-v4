@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>European Roulette</title>
+  <link rel="stylesheet" href="css/main.min.css">
+  <!-- GOOGLE FONTS -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Khojki:wght@700&display=swap" rel="stylesheet">
+  <!-- GOOGLE FONTS (PARA NÚMEROS) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
+  <!-- BOOTSTRAP FONT ICON CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+
+  <script type="text/javascript">
+
+    function startTimer(duration, display) {
+      var timer = duration, minutes, seconds;
+      setInterval(function () {
+        // minutes = parseInt(timer / 60, 10)
+        seconds = parseInt(timer % 30, 10);
+
+        // minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "3" + seconds : seconds;
+
+        // display.textContent = minutes + ":" + seconds;
+        display.textContent = seconds;
+
+        // if (--timer < 0) {
+        //   timer = duration;
+        //   alert('El tiempo se ha terminado');
+        //   clearInterval(timer);
+        // }
+      }, 1000);
+    }
+
+    window.onload = function () {
+      // var fiveMinutes = 60 * 5,
+      var oneMinute = 30,
+        display = document.querySelector('#time');
+      startTimer(oneMinute, display);
+    };
+
+  </script>
+
+</head>
+
+<body>
+
+  <!-- <header class="main-header d-flex align-items-center justify-content-center">
+    <h1 class="title--1">
+      Casino Royale
+    </h1>
+  </header> -->
+
+  <!-- <main class="main-content flex-md-grow-1"> -->
+  <main class="main-content">
+
+    <article class="video d-flex justify-content-center align-items-center">
+
+      <!-- LOGO -->
+      <div class="logo">
+        <h1 class="logo__title">
+          Apuestas Royal
+        </h1>
+      </div>
+
+      <!-- CONTADOR -->
+      <div class="counter">
+        <span id="time">30</span>
+      </div>
+
+      <img src="img/bg-ruleta.jpg" alt="Imagen de ruleta" class="bg-ruleta">
+
+      <!-- <video loop muted autoplay preload="auto" poster="http://sandbox.thewikies.com/vfe-generator/images/big-buck-bunny_poster.jpg">
+        <source src="video/n0_1_w.mp4" type="video/mp4" />
+        <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.webm" type="video/webm" />
+        <source src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.ogv" type="video/ogg" />
+        Tu navegador no soporta HTML5 Video
+      </video> -->
+
+    </article>
+
+    <div class="container-fluid g-0"> <!-- PARA APROVECHAR TODO EL ANCHO EN VISTA MÓVIL -->
+
+      <div class="row">
+
+        <div class="col-11 col-lg-10 mx-auto perspective">
+
+          <article class="table">
+
+            <section class="table__header">
+
+              <article class="table__header__left">
+                <span class="table__header__left__number">
+                  0
+                </span>
+              </article>
+
+              <article class="table__header__center">
+
+                <section class="table__header__center__body">
+
+                  <section class="table__header__center__body__item">
+
+                    <div class="table__header__center__body__item__grid">
+
+                      <div class="table__header__center__body__item__grid--one">
+                        <div class="table__header__center__body__item__grid--one__item table-bg--red"><span>1</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--one__item table-bg--black"><span>2</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--one__item table-bg--red"><span>3</span>
+                        </div>
+                      </div>
+                      <div class="table__header__center__body__item__grid--two">
+                        <div class="table__header__center__body__item__grid--two__item table-bg--black"><span>4</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--two__item table-bg--red"><span>5</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--two__item table-bg--black"><span>6</span>
+                        </div>
+                      </div>
+                      <div class="table__header__center__body__item__grid--three">
+                        <div class="table__header__center__body__item__grid--three__item table-bg--red"><span>7</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--three__item table-bg--black"><span>8</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--three__item table-bg--red"><span>9</span>
+                        </div>
+                      </div>
+                      <div class="table__header__center__body__item__grid--four">
+                        <div class="table__header__center__body__item__grid--four__item table-bg--black"><span>10</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--four__item table-bg--black"><span>11</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--four__item table-bg--red"><span>12</span>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </section>
+
+                  <section class="table__header__center__body__item">
+
+                    <div class="table__header__center__body__item__grid">
+
+                      <div class="table__header__center__body__item__grid--one">
+                        <div class="table__header__center__body__item__grid--one__item table-bg--black"><span>13</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--one__item table-bg--red"><span>14</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--one__item table-bg--black"><span>15</span>
+                        </div>
+                      </div>
+                      <div class="table__header__center__body__item__grid--two">
+                        <div class="table__header__center__body__item__grid--two__item table-bg--red"><span>16</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--two__item table-bg--black"><span>17</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--two__item table-bg--red"><span>18</span>
+                        </div>
+                      </div>
+                      <div class="table__header__center__body__item__grid--three">
+                        <div class="table__header__center__body__item__grid--three__item table-bg--red"><span>19</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--three__item table-bg--black">
+                          <span>20</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--three__item table-bg--red"><span>21</span>
+                        </div>
+                      </div>
+                      <div class="table__header__center__body__item__grid--four">
+                        <div class="table__header__center__body__item__grid--four__item table-bg--black"><span>22</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--four__item table-bg--red"><span>23</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--four__item table-bg--black"><span>24</span>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </section>
+
+                  <section class="table__header__center__body__item">
+
+                    <div class="table__header__center__body__item__grid">
+
+                      <div class="table__header__center__body__item__grid--one">
+                        <div class="table__header__center__body__item__grid--one__item table-bg--red"><span>25</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--one__item table-bg--black"><span>26</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--one__item table-bg--red"><span>27</span>
+                        </div>
+                      </div>
+                      <div class="table__header__center__body__item__grid--two">
+                        <div class="table__header__center__body__item__grid--two__item table-bg--black"><span>28</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--two__item table-bg--black"><span>29</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--two__item table-bg--red"><span>30</span>
+                        </div>
+                      </div>
+                      <div class="table__header__center__body__item__grid--three">
+                        <div class="table__header__center__body__item__grid--three__item table-bg--black">
+                          <span>31</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--three__item table-bg--red"><span>32</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--three__item table-bg--black">
+                          <span>33</span>
+                        </div>
+                      </div>
+                      <div class="table__header__center__body__item__grid--four">
+                        <div class="table__header__center__body__item__grid--four__item table-bg--red"><span>34</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--four__item table-bg--black"><span>35</span>
+                        </div>
+                        <div class="table__header__center__body__item__grid--four__item table-bg--red"><span>36</span>
+                        </div>
+                      </div>
+
+                    </div>
+
+                  </section>
+
+                </section>
+
+                <section class="table__header__center__footer">
+
+                  <article class="table__header__center__footer--one">
+
+                    <section class="table__header__center__footer--one__item">
+                      <p>1st - 12</p>
+                    </section>
+                    <section class="table__header__center__footer--one__item">
+                      <p>2nd - 12</p>
+                    </section>
+                    <section class="table__header__center__footer--one__item">
+                      <p>3rd - 12</p>
+                    </section>
+
+                  </article>
+
+                  <article class="table__header__center__footer--two">
+
+                    <section class="table__header__center__footer--two__item">
+
+                      <article class="table__header__center__footer--two__item__subitem">
+                        <p>1 - 18</p>
+                      </article>
+                      <article class="table__header__center__footer--two__item__subitem">
+                        <p>EVEN</p>
+                      </article>
+
+                    </section>
+
+                    <section class="table__header__center__footer--two__item even">
+
+                      <article class="table__header__center__footer--two__item__subitem"><span>Rombo</span></article>
+                      <article class="table__header__center__footer--two__item__subitem"><span>Rombo</span></article>
+
+                    </section>
+
+                    <section class="table__header__center__footer--two__item">
+
+                      <article class="table__header__center__footer--two__item__subitem">
+                        <p>ODD</p>
+                      </article>
+                      <article class="table__header__center__footer--two__item__subitem">
+                        <p>19 - 36</p>
+                      </article>
+
+                    </section>
+
+                  </article>
+
+                </section>
+
+              </article>
+
+              <article class="table__header__right">
+
+                <span class="table__header__right__item">
+                  <p>2:1</p>
+                </span>
+                <span class="table__header__right__item">
+                  <p>2:1</p>
+                </span>
+                <span class="table__header__right__item">
+                  <p>2:1</p>
+                </span>
+
+              </article>
+
+            </section>
+
+          </article>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="container-fluid g-0"> <!-- PARA APROVECHAR TODO EL ANCHO EN VISTA MÓVIL -->
+
+      <div class="row">
+
+        <div class="col-12 mx-auto">
+
+          <footer class="main-footer">
+
+            <article class="main-footer__min-max">
+
+              <section class="main-footer__min-max__item">
+                <span>Min</span>
+                <p>£0.10</p>
+              </section>
+              <section class="main-footer__min-max__item">
+                <span>Max</span>
+                <p>£5,000.00</p>
+              </section>
+
+            </article>
+
+            <article class="main-footer__top">
+
+              <section class="main-footer__top__left">
+
+                <div class="container-shadow">
+
+                  <div class="main-footer__top__left__item">
+                    <a href="#" class="btn--1">
+                      <i class="bi bi-info-lg"></i>
+                    </a>
+                  </div>
+                  <div class="main-footer__top__left__item">
+                    <a href="#" class="btn--1">
+                      <i class="bi bi-view-list"></i>
+                    </a>
+                  </div>
+                  <div class="main-footer__top__left__item">
+                    <a href="#" class="btn--1">
+                      <i class="bi bi-bar-chart-fill"></i>
+                    </a>
+                  </div>
+                  <div class="main-footer__top__left__item">
+                    <a href="#" class="btn--1">
+                      <i class="bi bi-star"></i>
+                    </a>
+                  </div>
+
+                </div>
+
+              </section>
+
+              <section class="main-footer__top__center">
+
+                <!-- COMPONENTE "CAROUSEL DE BOOTSTRAP" -->
+                <!-- <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel"> -->
+                <div id="carouselExampleControls" class="carousel slide">
+
+                  <div class="carousel-inner">
+
+                    <div class="carousel-item active">
+                      <div class="carousel-item__betchip">
+                        <a href="#" class="carousel-item__betchip__item"><span>
+                            <p>1</p>
+                          </span></a>
+                        <a href="#" class="carousel-item__betchip__item"><span>
+                            <p>2</p>
+                          </span></a>
+                        <a href="#" class="carousel-item__betchip__item"><span>
+                            <p>5</p>
+                          </span></a>
+                        <a href="#" class="carousel-item__betchip__item"><span class="fix-center--two">
+                            <p>10</p>
+                          </span></a>
+                        <a href="#" class="carousel-item__betchip__item"><span class="fix-center--two">
+                            <p>25</p>
+                          </span></a>
+                      </div>
+                    </div>
+
+                    <div class="carousel-item">
+                      <div class="carousel-item__betchip">
+                        <a href="#" class="carousel-item__betchip__item"><span>
+                            <p>1</p>
+                          </span></a>
+                        <a href="#" class="carousel-item__betchip__item"><span>
+                            <p>2</p>
+                          </span></a>
+                        <a href="#" class="carousel-item__betchip__item"><span>
+                            <p>5</p>
+                          </span></a>
+                        <a href="#" class="carousel-item__betchip__item"><span class="fix-center--two">
+                            <p>10</p>
+                          </span></a>
+                        <a href="#" class="carousel-item__betchip__item"><span class="fix-center--two">
+                            <p>25</p>
+                          </span></a>
+                      </div>
+                    </div>
+
+                    <div class="carousel-item">
+                      <div class="carousel-item__betchip">
+                        <a href="#" class="carousel-item__betchip__item"><span>
+                            <p>1</p>
+                          </span></a>
+                        <a href="#" class="carousel-item__betchip__item"><span>
+                            <p>2</p>
+                          </span></a>
+                        <a href="#" class="carousel-item__betchip__item"><span>
+                            <p>5</p>
+                          </span></a>
+                        <a href="#" class="carousel-item__betchip__item"><span class="fix-center--two">
+                            <p>10</p>
+                          </span></a>
+                        <a href="#" class="carousel-item__betchip__item"><span class="fix-center--two">
+                            <p>25</p>
+                          </span></a>
+                      </div>
+                    </div>
+
+                  </div>
+
+                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                  </button>
+                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                  </button>
+
+                </div>
+
+              </section>
+
+              <section class="main-footer__top__right">
+
+                <div class="container-shadow disabled">
+
+                  <div class="main-footer__top__right__item">
+                    <a href="#" class="btn--1">
+                      <span>x2</span>
+                    </a>
+                  </div>
+                  <div class="main-footer__top__right__item">
+                    <a href="#" class="btn--1">
+                      <i class="bi bi-arrow-90deg-down"></i>
+                    </a>
+                  </div>
+                  <div class="main-footer__top__right__item">
+                    <a href="#" class="btn--1">
+                      <i class="bi bi-x-lg"></i>
+                    </a>
+                  </div>
+                  <div class="main-footer__top__right__item">
+                    <a href="#" class="btn--1">
+                      <i class="bi bi-arrow-clockwise"></i>
+                    </a>
+                  </div>
+
+                </div>
+
+              </section>
+
+            </article>
+
+            <article class="main-footer__bottom">
+
+              <section class="main-footer__bottom__left">
+                <a href="#" class="btn--2">
+                  <i class="bi bi-gear-fill"></i>
+                </a>
+                <a href="#" class="btn--2">
+                  <i class="bi bi-volume-up-fill"></i>
+                </a>
+                <a href="#" class="btn--2">
+                  <span>AUTO</span>
+                </a>
+                <a href="#" class="btn--2">
+                  <i class="bi bi-question-lg"></i>
+                </a>
+              </section>
+
+              <section class="main-footer__bottom__center">
+                <article class="main-footer__bottom__center__text">
+                  <p class="main-footer__bottom__center__text__item">
+                    Cash: £5,000.00
+                  </p>
+                  <p class="main-footer__bottom__center__text__item">
+                    Bet: £0.00
+                  </p>
+                  <p class="main-footer__bottom__center__text__item">
+                    Win: £0.00
+                  </p>
+                </article>
+              </section>
+
+              <section class="main-footer__bottom__right">
+                <p class="main-footer__bottom__right__text">
+                  NETENT
+                </p>
+              </section>
+
+            </article>
+
+          </footer>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+  <script src="js/scripts.js"></script>
+</body>
+
+</html>
