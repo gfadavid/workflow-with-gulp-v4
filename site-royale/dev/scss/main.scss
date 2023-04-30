@@ -181,7 +181,11 @@ p {
         .table {
             // background-color: darkgoldenrod;
             margin-bottom: 20px;
-            transform: rotateX(20deg);
+            margin-top: 10px;
+            transform: rotateX(10deg);
+            @media screen and (min-width: 992px) {
+                transform: rotateX(20deg);
+            }
             @media screen and (min-width: 1400px) {
                 transform: rotateX(10deg);
                 margin-top: 10px;
@@ -280,14 +284,14 @@ p {
                                         display: flex;
                                         align-items: center;
                                         justify-content: center;
-                                        height: 25px; /* NÚMERO MÁGICO */
+                                        height: 20px; /* NÚMERO MÁGICO */
                                         @media screen and (min-width: 992px) {
                                             height: $height--5;
                                         }
                                         > span {
                                             line-height: 1;
                                             margin-top: -3px; /* NÚMERO MÁGICO */
-                                            font-size: $fsz--1;
+                                            font-size: 9px;
                                             opacity: 0.9;
                                             @media screen and (min-width: 992px) {
                                                 font-size: $fsz--7;
@@ -344,9 +348,15 @@ p {
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            height: $height--3;
-                            &__item {
+                            height: calc($height--3 - 20px);
+                            @media screen and (min-width: 992px) {
                                 height: $height--3;
+                            }
+                            &__item {
+                                height: calc($height--3 - 20px);
+                                @media screen and (min-width: 992px) {
+                                    height: $height--3;
+                                }
                                 p {
                                     position: relative;
                                     // top: -2px; /* NÚMERO MÁGICO */
@@ -355,7 +365,10 @@ p {
                                     }
                                 }
                                 &__subitem {
-                                    height: $height--3;
+                                    height: calc($height--3 - 20px);
+                                    @media screen and (min-width: 992px) {
+                                        height: $height--3;
+                                    }
                                     &:first-child {
                                         border-right: $border--2;
                                     }
