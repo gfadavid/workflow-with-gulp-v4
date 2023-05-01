@@ -84,8 +84,6 @@ body {
     //                 0.3em 0.3em 1em rgba(0, 0, 0);
     // }
     overflow-x: hidden;
-
-
 }
 
 a {
@@ -171,7 +169,8 @@ p {
                     }
                     &__title {
                         text-transform: uppercase;
-                        text-align: center;font-family: $font-family--2;
+                        text-align: center;
+                        font-family: $font-family--2;
                         font-weight: $fw--bold;
                         font-size: $fsz--7;
                         @media screen and (min-width: 992px) {
@@ -255,6 +254,12 @@ p {
                         left: -22px;
                         transform: rotateZ(-104deg);
                         width: 35px;
+                        @media screen and (min-width: 992px) {
+                            bottom: 34px;
+                            left: -51px;
+                            transform: rotate(-110deg);
+                            width: 75px;
+                        }
                     }
                     &__number {
                         font-family: $font-family--2;
@@ -436,7 +441,7 @@ p {
                             &__item.even {
                                 .table__header__center__footer--two__item__subitem {
                                     position: relative;
-                                    background-color: lighten($color: $red-game, $amount: 10);;
+                                    background-color: lighten($color: $red-game, $amount: 10);
                                     > span {
                                         visibility: hidden;
                                     }
