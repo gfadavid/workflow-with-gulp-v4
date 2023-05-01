@@ -19,6 +19,7 @@
   <!-- BOOTSTRAP FONT ICON CSS -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
 
+  <!-- CONTADOR -->
   <script type="text/javascript">
 
     function startTimer(duration, display) {
@@ -52,7 +53,32 @@
 
 </head>
 
-<body>
+<body onLoad="window_onload()">
+
+  <!-- MODAL PARA MÓVIL -->
+  <!-- Button trigger modal -->
+  <!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Lanzar demo de modal
+  </button> -->
+
+  <div id="exampleModal" class="modal" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Atención</h5>
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+        </div>
+        <div class="modal-body">
+          <p>Para que disfrutes de una mejor experiencia de juego, te recomendamos utilizar tu dispositivo de manera
+            horizontal.</p>
+        </div>
+        <div class="modal-footer">
+          <button id="btn-accept" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Aceptar</button>
+          <!-- <button type="button" class="btn btn-primary">Guardar cambios</button> -->
+        </div>
+      </div>
+    </div>
+  </div>
 
   <!-- <header class="main-header d-flex align-items-center justify-content-center">
     <h1 class="title--1">
@@ -531,6 +557,29 @@
   </main>
 
   <script src="js/scripts.js"></script>
+  <!-- MODAL -->
+  <script type="text/javascript">
+    var modal = new bootstrap.Modal(document.getElementById("exampleModal"), {});
+    var x = window.matchMedia("(max-width: 479px)")
+    var btn = document.getElementById("btn-accept");
+    // VALIDA LA RESOLUCIÓN DEL DISPOSITIVO
+    function myFunction(x) {
+      if (x.matches) { // If media query matches
+        modal.show();
+        btn.classList.add("disabled");
+      } else {
+        modal.hide();
+      }
+    }
+    function window_onload() {
+      myFunction(x) // Call listener function at run time
+      x.addListener(myFunction) // Attach listener function on state
+      // LOGICA PARA MANTENER EN SESIÓN
+      // if (sessionStorage.getItem('exampleModal') !== 'true') {
+      //   sessionStorage.setItem('exampleModal', 'true');
+      // }
+    }
+  </script>
 </body>
 
 </html>
