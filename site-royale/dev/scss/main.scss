@@ -136,7 +136,7 @@ p {
             &,
             .bg-ruleta {
                 width: 100%;
-                height: 25vh;
+                height: 24vh;
                 @media screen and (min-width: 992px) {
                     height: auto;
                 }
@@ -180,8 +180,14 @@ p {
                     }
                 }
                 .counter {
+                    width: 50px;
+                    height: 50px;
+                    font-size: 20px;
                     @media screen and (min-width: 992px) {
                         right: 15%;
+                        width: 80px;
+                        height: 80px;
+                        font-size: $fsz--5;
                     }
                 }
             }
