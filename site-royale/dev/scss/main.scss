@@ -200,11 +200,8 @@ p {
         .table {
             // background-color: darkgoldenrod;
             margin-bottom: 20px;
-            margin-top: 10px;
+            margin-top: 5px;
             transform: rotateX(10deg);
-            @media screen and (min-width: 570px) and (max-width: 991px) {
-                margin-top: 5px;
-            }
             @media screen and (min-width: 992px) {
                 transform: rotateX(20deg);
             }
@@ -311,14 +308,14 @@ p {
                                         display: flex;
                                         align-items: center;
                                         justify-content: center;
-                                        height: 20px; /* NÚMERO MÁGICO */
+                                        height: 30px; /* NÚMERO MÁGICO */
                                         @media screen and (min-width: 992px) {
                                             height: $height--5;
                                         }
                                         > span {
                                             line-height: 1;
                                             margin-top: -3px; /* NÚMERO MÁGICO */
-                                            font-size: 9px;
+                                            font-size: 13px; /* VERSIÓN MÓVIL */
                                             opacity: 0.9;
                                             @media screen and (min-width: 992px) {
                                                 font-size: $fsz--7;
