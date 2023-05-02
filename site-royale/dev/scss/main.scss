@@ -794,9 +794,11 @@ p {
                     @at-root {
                         .carousel-control-prev {
                             opacity: $opacity--4;
-                            left: 60px;
+                            // left: 60px;
+                            left: 15%;
                             @media screen and (min-width: 570px) and (max-width: 991px) {
                                 left: 100px;
+                                left: 20%;
                             }
                             @media screen and (min-width: 1200px) {
                                 left: 10%;
@@ -810,9 +812,11 @@ p {
                         }
                         .carousel-control-next {
                             opacity: $opacity--4;
-                            right: 60px;
+                            // right: 60px;
+                            right: 15%;
                             @media screen and (min-width: 570px) and (max-width: 991px) {
-                                right: 100px;
+                                // right: 100px;
+                                right: 20%;
                             }
                             @media screen and (min-width: 1200px) {
                                 right: 10%;
