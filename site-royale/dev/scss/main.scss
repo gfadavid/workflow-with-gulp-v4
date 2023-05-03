@@ -215,7 +215,7 @@ p {
                 &__left {
                     // background-color: lightcoral;
                     width: $width--2;
-                    height: 62px; /* MÓVIL */
+                    height: 92px; /* MÓVIL */
                     display: flex;
                     justify-content: center;
                     align-items: center;
@@ -235,9 +235,9 @@ p {
                         transform: rotateZ(108deg);
                     }
                     &::before {
-                        top: 12px;
-                        left: -19px;
-                        width: 29px;
+                        top: 22px;
+                        left: -33px;
+                        width: 50px;
                         transform: rotate(108deg);
                         @media screen and (min-width: 992px) {
                             transform: rotate(108deg);
@@ -247,10 +247,10 @@ p {
                         }
                     }
                     &::after {
-                        bottom: 16px;
-                        left: -22px;
-                        transform: rotateZ(-104deg);
-                        width: 35px;
+                        bottom: 21px;
+                        left: -31px;
+                        transform: rotateZ(-111deg);
+                        width: 47px;
                         @media screen and (min-width: 992px) {
                             bottom: 34px;
                             left: -51px;
@@ -261,7 +261,7 @@ p {
                     &__number {
                         font-family: $font-family--2;
                         font-size: $fsz--5;
-                        margin-left: -5px;
+                        margin-left: -10px; /* MÓVIL */
                         line-height: 1;
                         opacity: $opacity--3;
                         @media screen and (min-width: 992px) {
@@ -543,8 +543,8 @@ p {
         @media screen and (min-width: 640px) and (max-width: 767px) {
             display: block;
             position: absolute;
-            top: -80px;
-            left: 0;
+            top: -49px;
+            left: 9px;
         }
         @media screen and (min-width: 570px) and (max-width: 991px) {
             bottom: -12px;
