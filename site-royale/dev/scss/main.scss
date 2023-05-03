@@ -478,7 +478,7 @@ p {
                 &__right {
                     // background-color: lightskyblue;
                     width: $width--2;
-                    height: 62px;
+                    height: 92px; /* MÓVIL */
                     display: flex;
                     flex-direction: column;
                     border: $border--2;
@@ -489,7 +489,7 @@ p {
                     }
                     &__item {
                         text-align: center;
-                        height: calc($height--3 - 25px); /* MÓVIL */
+                        height: calc(92px / 3); /* MÓVIL */
                         position: relative;
                         font-size: 14px;
                         @media screen and (min-width: 992px) {
