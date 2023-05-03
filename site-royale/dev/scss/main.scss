@@ -894,13 +894,18 @@ p {
         display: flex;
         justify-content: space-between;
         align-items: center;
+        margin-top: 0;
+        position: fixed;
+        width: 100vw;
+        bottom: 0;
         @media screen and (min-width: 570px) and (max-width: 991px) {
-            margin-top: 5px;
+            // margin-top: 5px;
         }
         @media screen and (min-width: 640px) and (max-width: 767px) {
-            margin-top: -17px;
+            // margin-top: -17px;
         }
         @media screen and (min-width: 992px) {
+            position: static;
             margin-top: 10px;
         }
         p {
